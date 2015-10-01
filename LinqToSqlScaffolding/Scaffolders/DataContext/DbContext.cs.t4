@@ -1,0 +1,26 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="cs" #>
+using System;
+using System.Collections.Generic;
+using System.Data.Linq;
+using System.Linq;
+using System.Configuration;
+
+namespace <#= Model.DbContextNamespace #>
+{
+    public partial class <#= Model.DbContextType #>
+    {
+        private readonly DataContext dataContext;
+
+		public <#= Model.DbContextType #>()
+		{
+		    var connectionString = ConfigurationManager.ConnectionStrings["ApplicationServices"].ConnectionString;
+		    dataContext = new DataContext(connectionString);
+		}
+
+        public void SaveChanges()
+        {
+            dataContext.SubmitChanges();
+        }
+    }
+}

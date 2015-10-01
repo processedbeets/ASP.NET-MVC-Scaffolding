@@ -1,0 +1,3 @@
+﻿<#@ template hostspecific="true" language="C#" inherits="DynamicTransform" #>
+<#@ Output Extension="extensionSpecifiedByOutputDirective" #>
+Fixed string output from template with output extension

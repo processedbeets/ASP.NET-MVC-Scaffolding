@@ -1,0 +1,92 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "T4Scaffolding", "T4Scaffolding", "{2E67D06D-78A8-43B3-8CE1-202AD0B8325F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4Scaffolding", "T4Scaffolding\T4Scaffolding.csproj", "{D50AD1C5-0842-47C4-8A26-8508B4998BE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4Scaffolding.Test", "T4Scaffolding.Test\T4Scaffolding.Test.csproj", "{2B8B5171-6112-4761-AD70-3843591668FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcScaffolding", "MvcScaffolding\MvcScaffolding.csproj", "{7C76B8CE-1525-47C2-81D6-46C88FC85786}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqToSqlScaffolding", "LinqToSqlScaffolding\LinqToSqlScaffolding.csproj", "{B63A5F25-C2D7-451D-8208-F812416B68D9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Example Add-On Packages", "Example Add-On Packages", "{94CF1A10-67CE-4945-8F81-B4A13D1F3FA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4Scaffolding.NuGetServices", "T4Scaffolding.NuGetServices\T4Scaffolding.NuGetServices.csproj", "{412A692C-C66A-4272-9FCD-C78DDE98712A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4Scaffolding.Core", "T4Scaffolding.Core\T4Scaffolding.Core.csproj", "{58D14702-323C-4461-AB37-95061EC758ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D50AD1C5-0842-47C4-8A26-8508B4998BE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D50AD1C5-0842-47C4-8A26-8508B4998BE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D50AD1C5-0842-47C4-8A26-8508B4998BE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D50AD1C5-0842-47C4-8A26-8508B4998BE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B8B5171-6112-4761-AD70-3843591668FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B8B5171-6112-4761-AD70-3843591668FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B8B5171-6112-4761-AD70-3843591668FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B8B5171-6112-4761-AD70-3843591668FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C76B8CE-1525-47C2-81D6-46C88FC85786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C76B8CE-1525-47C2-81D6-46C88FC85786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C76B8CE-1525-47C2-81D6-46C88FC85786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C76B8CE-1525-47C2-81D6-46C88FC85786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B63A5F25-C2D7-451D-8208-F812416B68D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B63A5F25-C2D7-451D-8208-F812416B68D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B63A5F25-C2D7-451D-8208-F812416B68D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B63A5F25-C2D7-451D-8208-F812416B68D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{412A692C-C66A-4272-9FCD-C78DDE98712A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{412A692C-C66A-4272-9FCD-C78DDE98712A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{412A692C-C66A-4272-9FCD-C78DDE98712A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{412A692C-C66A-4272-9FCD-C78DDE98712A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58D14702-323C-4461-AB37-95061EC758ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58D14702-323C-4461-AB37-95061EC758ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58D14702-323C-4461-AB37-95061EC758ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58D14702-323C-4461-AB37-95061EC758ED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D50AD1C5-0842-47C4-8A26-8508B4998BE3} = {2E67D06D-78A8-43B3-8CE1-202AD0B8325F}
+		{2B8B5171-6112-4761-AD70-3843591668FC} = {2E67D06D-78A8-43B3-8CE1-202AD0B8325F}
+		{B63A5F25-C2D7-451D-8208-F812416B68D9} = {94CF1A10-67CE-4945-8F81-B4A13D1F3FA3}
+		{412A692C-C66A-4272-9FCD-C78DDE98712A} = {2E67D06D-78A8-43B3-8CE1-202AD0B8325F}
+		{58D14702-323C-4461-AB37-95061EC758ED} = {2E67D06D-78A8-43B3-8CE1-202AD0B8325F}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://vvmspds.gene.com:8080/tfs/se
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = T4Scaffolding\\T4Scaffolding.csproj
+		SccProjectTopLevelParentUniqueName1 = Scaffolding.sln
+		SccProjectName1 = T4Scaffolding
+		SccLocalPath1 = T4Scaffolding
+		SccProjectUniqueName2 = T4Scaffolding.Test\\T4Scaffolding.Test.csproj
+		SccProjectTopLevelParentUniqueName2 = Scaffolding.sln
+		SccProjectName2 = T4Scaffolding.Test
+		SccLocalPath2 = T4Scaffolding.Test
+		SccProjectUniqueName3 = MvcScaffolding\\MvcScaffolding.csproj
+		SccProjectName3 = MvcScaffolding
+		SccLocalPath3 = MvcScaffolding
+		SccProjectUniqueName4 = LinqToSqlScaffolding\\LinqToSqlScaffolding.csproj
+		SccProjectTopLevelParentUniqueName4 = Scaffolding.sln
+		SccProjectName4 = LinqToSqlScaffolding
+		SccLocalPath4 = LinqToSqlScaffolding
+		SccProjectUniqueName5 = T4Scaffolding.NuGetServices\\T4Scaffolding.NuGetServices.csproj
+		SccProjectTopLevelParentUniqueName5 = Scaffolding.sln
+		SccProjectName5 = T4Scaffolding.NuGetServices
+		SccLocalPath5 = T4Scaffolding.NuGetServices
+		SccProjectUniqueName6 = T4Scaffolding.Core\\T4Scaffolding.Core.csproj
+		SccProjectTopLevelParentUniqueName6 = Scaffolding.sln
+		SccProjectName6 = T4Scaffolding.Core
+		SccLocalPath6 = T4Scaffolding.Core
+	EndGlobalSection
+EndGlobal

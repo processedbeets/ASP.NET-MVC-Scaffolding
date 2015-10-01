@@ -1,0 +1,107 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output extension="aspx" #>
+<#@ assembly name="System.ComponentModel.DataAnnotations" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data.Entity" #>
+<#@ assembly name="System.Data.Linq" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.ComponentModel.DataAnnotations" #>
+<#@ import namespace="System.Data.Linq.Mapping" #>
+<#@ import namespace="System.Data.Objects.DataClasses" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Reflection" #>
+<# var viewDataType = (EnvDTE.CodeType) Model.ViewDataType; #>
+<#
+string mvcViewDataTypeGenericString = (viewDataType != null) ? "<" + viewDataType.FullName + ">" : "<dynamic>";
+int CPHCounter = 1;
+#>
+<#
+if(Model.IsContentPage) {
+#>
+<%@ Page Title="" Language="C#" MasterPageFile="~<#= Model.Layout #>" Inherits="System.Web.Mvc.ViewPage<#= mvcViewDataTypeGenericString #>" %>
+
+<#
+    foreach(string cphid in Model.SectionNames) {
+        if(cphid.Equals("TitleContent", StringComparison.OrdinalIgnoreCase)) {
+#>
+<asp:Content ID="Content<#= CPHCounter #>" ContentPlaceHolderID="<#= cphid #>" runat="server">
+    <#= Model.ViewName #>
+</asp:Content>
+
+<#
+            CPHCounter++;
+        }
+    }
+#>
+<asp:Content ID="Content<#= CPHCounter #>" ContentPlaceHolderID="<#= Model.PrimarySectionName #>" runat="server">
+
+<h2><#= Model.ViewName #></h2>
+
+<#
+} else {
+#>
+<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<#= mvcViewDataTypeGenericString #>" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title><#= Model.ViewName #></title>
+</head>
+<body>
+<#
+    PushIndent("    ");
+}
+#>
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend><#= Model.ViewDataTypeName ?? String.Empty #></legend>
+<#
+foreach (ModelProperty property in GetModelProperties(Model.ViewDataType, true)) {
+    if (!property.IsPrimaryKey && !property.IsForeignKey) {
+#>
+
+    <div class="display-label"><#= property.Name #></div>
+    <div class="display-field"><%: <#= property.ValueExpression #> %></div>
+<#
+    }
+}
+#>
+</fieldset>
+<% using (Html.BeginForm()) { %>
+    <p>
+        <input type="submit" value="Delete" /> |
+        <%: Html.ActionLink("Back to List", "Index") %>
+    </p>
+<% } %>
+
+<#
+// The following code closes the asp:Content tag used in the case of a master page and the body and html tags in the case of a regular view page
+#>
+<#
+if(Model.IsContentPage) {
+#>
+</asp:Content>
+<#
+    foreach(string cphid in Model.SectionNames) {
+        if(!cphid.Equals("TitleContent", StringComparison.OrdinalIgnoreCase) && !cphid.Equals(Model.PrimarySectionName, StringComparison.OrdinalIgnoreCase)) {
+            CPHCounter++;
+#>
+
+<asp:Content ID="Content<#= CPHCounter #>" ContentPlaceHolderID="<#= cphid #>" runat="server">
+</asp:Content>
+<#
+        }
+    }
+#>
+<#
+} else if(!Model.IsContentPage) {
+    ClearIndent();
+#>
+</body>
+</html>
+<#
+}
+#>
+

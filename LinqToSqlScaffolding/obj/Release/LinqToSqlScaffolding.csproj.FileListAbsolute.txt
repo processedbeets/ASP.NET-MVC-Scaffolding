@@ -1,0 +1,16 @@
+C:\Genentech\CCP2RTS\MvcScaffolding\LinqToSqlScaffolding\bin\Release\InstallationDummyFile.txt
+C:\Genentech\CCP2RTS\MvcScaffolding\LinqToSqlScaffolding\bin\Release\install.ps1
+C:\Genentech\CCP2RTS\MvcScaffolding\LinqToSqlScaffolding\bin\Release\LinqToSqlScaffolding.nuspec
+C:\Genentech\CCP2RTS\MvcScaffolding\LinqToSqlScaffolding\bin\Release\Scaffolders\DataContext\DbContext.vb.t4
+C:\Genentech\CCP2RTS\MvcScaffolding\LinqToSqlScaffolding\bin\Release\Scaffolders\DataContext\DbContext.cs.t4
+C:\Genentech\CCP2RTS\MvcScaffolding\LinqToSqlScaffolding\bin\Release\Scaffolders\DataContext\DbContextEntityMember.cs.t4
+C:\Genentech\CCP2RTS\MvcScaffolding\LinqToSqlScaffolding\bin\Release\Scaffolders\DataContext\DbContextEntityMember.vb.t4
+C:\Genentech\CCP2RTS\MvcScaffolding\LinqToSqlScaffolding\bin\Release\Scaffolders\DataContext\LinqToSqlScaffolding.DataContext.ps1
+C:\Genentech\CCP2RTS\MvcScaffolding\LinqToSqlScaffolding\bin\Release\Scaffolders\Repository\Repository.vb.t4
+C:\Genentech\CCP2RTS\MvcScaffolding\LinqToSqlScaffolding\bin\Release\Scaffolders\Repository\Repository.cs.t4
+C:\Genentech\CCP2RTS\MvcScaffolding\LinqToSqlScaffolding\bin\Release\Scaffolders\Repository\LinqToSqlScaffolding.Repository.ps1
+C:\Genentech\CCP2RTS\MvcScaffolding\LinqToSqlScaffolding\bin\Release\LinqToSqlScaffolding.dll
+C:\Genentech\CCP2RTS\MvcScaffolding\LinqToSqlScaffolding\bin\Release\LinqToSqlScaffolding.pdb
+C:\Genentech\CCP2RTS\MvcScaffolding\LinqToSqlScaffolding\obj\Release\LinqToSqlScaffolding.dll
+C:\Genentech\CCP2RTS\MvcScaffolding\LinqToSqlScaffolding\obj\Release\LinqToSqlScaffolding.pdb
+C:\Genentech\CCP2RTS\MvcScaffolding\LinqToSqlScaffolding\obj\Release\LinqToSqlScaffolding.csprojResolveAssemblyReference.cache

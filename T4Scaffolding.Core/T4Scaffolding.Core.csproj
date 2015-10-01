@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{58D14702-323C-4461-AB37-95061EC758ED}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>T4Scaffolding</RootNamespace>
+    <AssemblyName>T4Scaffolding</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="envdte, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="envdte80, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\WindowsPowerShell\3.0\System.Management.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.VisualStudio.TextTemplating.Interfaces.10.0, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cmdlets\AddClassMemberCmdlet.cs" />
+    <Compile Include="Cmdlets\AddClassMemberViaTemplateCmdlet.cs" />
+    <Compile Include="Cmdlets\AddProjectItemViaTemplateCmdlet.cs" />
+    <Compile Include="Cmdlets\FindScaffolderTemplateCmdlet.cs" />
+    <Compile Include="Cmdlets\GetDefaultScaffolderCmdlet.cs" />
+    <Compile Include="Cmdlets\GetPluralizedWordCmdlet.cs" />
+    <Compile Include="Cmdlets\GetPrimaryKeyCmdlet.cs" />
+    <Compile Include="Cmdlets\GetProjectAspNetMvcVersionCmdlet.cs" />
+    <Compile Include="Cmdlets\GetProjectFolderCmdlet.cs" />
+    <Compile Include="Cmdlets\GetProjectItemCmdlet.cs" />
+    <Compile Include="Cmdlets\GetProjectLanguageCmdlet.cs" />
+    <Compile Include="Cmdlets\GetProjectTypeCmdlet.cs" />
+    <Compile Include="Cmdlets\GetRelatedEntitiesCmdlet.cs" />
+    <Compile Include="Cmdlets\GetScaffolderCmdlet.cs" />
+    <Compile Include="Cmdlets\GetSingularizedWordCmdlet.cs" />
+    <Compile Include="Cmdlets\GlobalCommandRunner.cs" />
+    <Compile Include="Cmdlets\InvokeScaffolderCmdlet.cs" />
+    <Compile Include="Cmdlets\InvokeScaffoldTemplateCmdlet.cs" />
+    <Compile Include="Cmdlets\ScaffoldingBaseCmdlet.cs" />
+    <Compile Include="Cmdlets\SetDefaultScaffolderCmdlet.cs" />
+    <Compile Include="Cmdlets\SetIsCheckedOutCmdlet.cs" />
+    <Compile Include="ControllerScaffolderAttribute.cs" />
+    <Compile Include="Core\CommandInvokers\DefaultPowershellCommandInvoker.cs" />
+    <Compile Include="Core\CommandInvokers\IPowershellCommandInvoker.cs" />
+    <Compile Include="Core\Configuration\DefaultScaffolderConfigEntry.cs" />
+    <Compile Include="Core\Configuration\IScaffoldingConfigStore.cs" />
+    <Compile Include="Core\Configuration\XmlScaffoldingConfig.cs" />
+    <Compile Include="Core\Configuration\XmlScaffoldingConfigStore.cs" />
+    <Compile Include="Core\EnvDTE\EnvDTEExtensions.cs" />
+    <Compile Include="Core\FileSystem\DefaultFileSystem.cs" />
+    <Compile Include="Core\FileSystem\IFileSystem.cs" />
+    <Compile Include="Core\PrimaryKeyLocators\IPrimaryKeyLocator.cs" />
+    <Compile Include="Core\PrimaryKeyLocators\PrimaryKeyLocation.cs" />
+    <Compile Include="Core\ProjectTypeLocators\EnvDTETypeLocator.cs" />
+    <Compile Include="Core\ProjectTypeLocators\IProjectTypeLocator.cs" />
+    <Compile Include="Core\RelatedEntityLocators\IRelatedEntityLocator.cs" />
+    <Compile Include="Core\RelatedEntityLocators\RelatedEntityInfo.cs" />
+    <Compile Include="Core\RelatedEntityLocators\RelatedEntityLocation.cs" />
+    <Compile Include="Core\RelatedEntityLocators\RelationType.cs" />
+    <Compile Include="Core\ScaffolderLocators\IScaffolderLocator.cs" />
+    <Compile Include="Core\ScaffolderLocators\Ps1ScaffolderLocator.cs" />
+    <Compile Include="Core\ScaffolderLocators\ScaffolderInfo.cs" />
+    <Compile Include="Core\ScaffoldingConstants.cs" />
+    <Compile Include="Core\Templating\DynamicTextTemplatingEngineHost.cs" />
+    <Compile Include="Core\Templating\DynamicViewModel.cs" />
+    <Compile Include="Core\Templating\ModelPropertyClassFeatures.cs" />
+    <Compile Include="Core\VsConstants.cs" />
+    <Compile Include="Core\VsProjectExtensions.cs" />
+    <Compile Include="Namespaces.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScaffolderAttribute.cs" />
+    <Compile Include="ViewScaffolderAttribute.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="init.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="install.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Scaffolders\CustomScaffolder\DefaultPs1Script.ps1.t4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Scaffolders\CustomScaffolder\DefaultT4Template.cs.t4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Scaffolders\CustomScaffolder\DefaultT4Template.vb.t4">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Scaffolders\CustomScaffolder\T4Scaffolding.CustomScaffolder.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Scaffolders\CustomTemplate\T4Scaffolding.CustomTemplate.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="scaffoldingTabExpansion.psm1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="T4Scaffolding.Format.ps1xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="T4Scaffolding.Core.nuspec">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="uninstall.ps1">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\T4Scaffolding.NuGetServices\T4Scaffolding.NuGetServices.csproj">
+      <Project>{412A692C-C66A-4272-9FCD-C78DDE98712A}</Project>
+      <Name>T4Scaffolding.NuGetServices</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="InstallationDummyFile.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Target Name="AfterBuild">
+    <Exec Command="$(MSBuildProjectDirectory)\..\Tools\NuPack.exe pack" WorkingDirectory="$(OutputPath)" />
+    <CreateItem Include=".\**\*.nupkg">
+      <Output TaskParameter="Include" ItemName="BuiltPackages" />
+    </CreateItem>
+    <Copy SourceFiles="@(BuiltPackages)" DestinationFolder="$(MSBuildProjectDirectory)\..\BuiltPackages">
+    </Copy>
+  </Target>
+</Project>

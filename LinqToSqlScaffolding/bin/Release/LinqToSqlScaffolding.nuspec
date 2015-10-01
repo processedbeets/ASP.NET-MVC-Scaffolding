@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<package>
+  <metadata>
+    <id>LinqToSqlScaffolding</id>
+    <version>0.3.1</version>
+    <authors>Steve Sanderson</authors>
+    <description>Scaffolders for LINQ to SQL repositories and data contexts</description>
+    <summary>Scaffolders for LINQ to SQL repositories and data contexts</summary>
+    <dependencies>
+      <dependency id="T4Scaffolding" version="1.0.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="Scaffolders\**\*.t4" target="tools" />
+    <file src="Scaffolders\**\*.ps1" target="tools" />
+    <file src="install.ps1" target="tools" />
+    <file src="InstallationDummyFile.txt" target="content" />
+  </files>
+</package>

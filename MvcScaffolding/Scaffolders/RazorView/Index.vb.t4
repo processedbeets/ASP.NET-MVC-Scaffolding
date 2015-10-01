@@ -1,0 +1,87 @@
+﻿<#@ Template Language="VB" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output extension="vbhtml" #>
+<#@ assembly name="System.ComponentModel.DataAnnotations" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data.Entity" #>
+<#@ assembly name="System.Data.Linq" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.ComponentModel.DataAnnotations" #>
+<#@ import namespace="System.Data.Linq.Mapping" #>
+<#@ import namespace="System.Data.Objects.DataClasses" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="EnvDTE" #>
+<# Dim viewDataType = CType(Model.ViewDataType, CodeType) #>
+<# If viewDataType IsNot Nothing #>
+@ModelType IEnumerable(Of <#= viewDataType.FullName #>)
+
+<# End If #>
+@Code
+    ViewData("Title") = "<#= Model.ViewName #>"
+<#
+If Not String.IsNullOrEmpty(Model.Layout)
+#>
+    Layout = "<#= Model.Layout #>"
+<#
+End If
+#>
+End Code
+
+<h2><#= Model.ViewName #></h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p> 
+<table>
+    <tr>
+        <th></th>
+<#
+Dim properties As List(Of ModelProperty) = GetModelProperties(Model.ViewDataType, True)
+For Each modelProp As ModelProperty In properties
+    If (Not modelProp.IsPrimaryKey AndAlso Not modelProp.IsForeignKey) Then
+#>
+        <th>
+            <#= modelProp.Name #>
+        </th>
+<#
+    End If
+Next
+#>
+    </tr>
+
+@For Each item In Model
+	Dim itemValue = item
+	@<tr>
+<# If Not String.IsNullOrEmpty(Model.PrimaryKeyName) Then #>
+        <td>
+            @Html.ActionLink("Edit", "Edit", New With {.id = itemValue.<#= Model.PrimaryKeyName #>}) |
+            @Html.ActionLink("Details", "Details", New With {.id = itemValue.<#= Model.PrimaryKeyName #>}) |
+            @Html.ActionLink("Delete", "Delete", New With {.id = itemValue.<#= Model.PrimaryKeyName #>})
+        </td>
+<#
+Else
+#>
+        <td>
+            @*@Html.ActionLink("Edit", "Edit", New With {.id = itemValue.PrimaryKey}) |
+            @Html.ActionLink("Details", "Details", New With {.id = itemValue.PrimaryKey}) |
+            @Html.ActionLink("Delete", "Delete", New With {.id = itemValue.PrimaryKey})*@
+        </td>
+<#
+End If
+    
+For Each modelProp As ModelProperty In properties
+    If (Not modelProp.IsPrimaryKey AndAlso Not modelProp.IsForeignKey) Then
+#>
+        <td>
+			@<#= modelProp.ValueExpression.Replace("Model.", "itemValue.") #>
+        </td>
+<#
+    End If
+Next
+#>
+    </tr>
+Next
+
+</table>

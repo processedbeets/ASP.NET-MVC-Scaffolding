@@ -1,0 +1,54 @@
+﻿<#@ Template Language="VB" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output extension="vbhtml" #>
+<#@ assembly name="System.ComponentModel.DataAnnotations" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data.Entity" #>
+<#@ assembly name="System.Data.Linq" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.ComponentModel.DataAnnotations" #>
+<#@ import namespace="System.Data.Linq.Mapping" #>
+<#@ import namespace="System.Data.Objects.DataClasses" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="EnvDTE" #>
+<# Dim viewDataType = CType(Model.ViewDataType, CodeType) #>
+<# If viewDataType IsNot Nothing #>
+@ModelType <#= viewDataType.FullName #>
+
+<# End If #>
+@Code
+    ViewData("Title") = "<#= Model.ViewName #>"
+<# If Not String.IsNullOrEmpty(Model.Layout) #>
+    Layout = "<#= Model.Layout #>"
+<# End If #>
+End Code
+
+<h2><#= Model.ViewName #></h2>
+
+<fieldset>
+    <legend><#= If(Model.ViewDataTypeName, String.Empty) #></legend>
+<#
+For Each modelProp As ModelProperty In GetModelProperties(Model.ViewDataType, True)
+    If (Not modelProp.IsPrimaryKey AndAlso Not modelProp.IsForeignKey) Then
+#>
+
+    <div class="display-label"><#= modelProp.Name #></div>
+    <div class="display-field">@<#= modelProp.ValueExpression #></div>
+<#
+    End If
+Next
+#>
+</fieldset>
+
+<p>
+<# If Not String.IsNullOrEmpty(Model.PrimaryKeyName) Then #>
+    @Html.ActionLink("Edit", "Edit", New With {.id = Model.<#= Model.PrimaryKeyName #>}) |
+    @Html.ActionLink("Back to List", "Index")
+<# Else #>
+    @*@Html.ActionLink("Edit", "Edit", New With {.id = Model.PrimaryKey}) |*@
+    @Html.ActionLink("Back to List", "Index")
+<# End If #>
+</p>
+

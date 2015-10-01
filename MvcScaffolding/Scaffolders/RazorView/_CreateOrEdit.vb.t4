@@ -1,0 +1,51 @@
+﻿<#@ Template Language="VB" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output extension="vbhtml" #>
+<#@ assembly name="System.ComponentModel.DataAnnotations" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data.Entity" #>
+<#@ assembly name="System.Data.Linq" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.ComponentModel.DataAnnotations" #>
+<#@ import namespace="System.Data.Linq.Mapping" #>
+<#@ import namespace="System.Data.Objects.DataClasses" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Reflection" #>
+<#@ import namespace="EnvDTE" #>
+<# Dim viewDataType = CType(Model.ViewDataType, CodeType) #>
+<# If viewDataType IsNot Nothing #>
+@ModelType <#= viewDataType.FullName #>
+
+<# End If #>
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<#
+For Each modelProp As ModelProperty In GetModelProperties(Model.ViewDataType, False)
+    If (Not modelProp.IsPrimaryKey) AndAlso (Not modelProp.IsForeignKey) AndAlso (Not modelProp.IsReadOnly) Then
+#>
+<div class="editor-label">
+    @Html.LabelFor(Function(model) model.<#= modelProp.Name #>)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(Function(model) model.<#= modelProp.Name #>)
+    @Html.ValidationMessageFor(Function(model) model.<#= modelProp.Name #>)
+</div>
+
+<#
+    End If
+Next
+#>
+<# For Each relation As RelatedEntityInfo In ParentRelations #>
+<div class="editor-label">
+    <#= relation.RelationName #>
+</div>
+<div class="editor-field">
+    @Html.DropDownListFor(Function(model) model.<#= relation.RelationProperty.Name #>, CType(ViewBag.Possible<#= relation.RelationNamePlural #>, IEnumerable(Of <#= relation.RelatedEntityType.FullName #>)).Select(Function(optionValue) New SelectListItem() With { _
+		.Text = <#= GetValueExpression("optionValue", relation.RelatedEntityType) #>, _
+        .Value = optionValue.<#= relation.RelatedEntityPrimaryKeyName #>.ToString(), _
+        .Selected = (Model IsNot Nothing) AndAlso (optionValue.<#= relation.RelatedEntityPrimaryKeyName #>.Equals(Model.<#= relation.RelationProperty.Name #>)) _
+    }), "Choose...")
+    @Html.ValidationMessageFor(Function(model) model.<#= relation.RelationProperty.Name #>)
+</div>
+<# Next #>

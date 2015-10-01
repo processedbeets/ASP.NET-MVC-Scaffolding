@@ -1,0 +1,52 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output extension="cshtml" #>
+<#@ assembly name="System.ComponentModel.DataAnnotations" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data.Entity" #>
+<#@ assembly name="System.Data.Linq" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.ComponentModel.DataAnnotations" #>
+<#@ import namespace="System.Data.Linq.Mapping" #>
+<#@ import namespace="System.Data.Objects.DataClasses" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Reflection" #>
+<# var viewDataType = (EnvDTE.CodeType) Model.ViewDataType; #>
+<# if(viewDataType != null) { #>
+@model <#= viewDataType.FullName #>
+
+<# } #>
+@{
+    ViewBag.Title = "<#= Model.ViewName #>";
+<# if (!String.IsNullOrEmpty(Model.Layout)) { #>
+    Layout = "<#= Model.Layout #>";
+<# } #>
+}
+
+<h2><#= Model.ViewName #></h2>
+
+<fieldset>
+    <legend><#= Model.ViewDataTypeName ?? String.Empty #></legend>
+<#
+foreach (ModelProperty property in GetModelProperties(Model.ViewDataType, true)) {
+    if (!property.IsPrimaryKey && !property.IsForeignKey) {
+#>
+
+    <div class="display-label"><#= property.Name #></div>
+    <div class="display-field">@<#= property.ValueExpression #></div>
+<#
+    }
+}
+#>
+</fieldset>
+<p>
+<# if (!String.IsNullOrEmpty(Model.PrimaryKeyName)) { #>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.<#= Model.PrimaryKeyName #> }) |
+    @Html.ActionLink("Back to List", "Index")
+<# } else { #>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+<# } #>
+</p>
+

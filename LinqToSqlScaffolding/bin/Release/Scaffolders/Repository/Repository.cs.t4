@@ -1,0 +1,78 @@
+﻿<#@ template language="C#" HostSpecific="True"  inherits="DynamicTransform" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="EnvDTE" #>
+<#@ Output Extension="cs" #>
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using System.Web;
+<# if((!string.IsNullOrEmpty(Model.ModelTypeNamespace)) && (Model.ModelTypeNamespace != Model.RepositoryNamespace)) { #>
+using <#= Model.ModelTypeNamespace #>;
+<# } #>
+
+namespace <#= Model.RepositoryNamespace #>
+{ 
+<# 
+	var modelType = (CodeType)Model.ModelType; 
+	var modelName = modelType.Name; 
+	var modelNamePlural = Model.ModelTypePluralized; 
+	var contextName = Model.DbContextType; 
+	var primaryKeyProperty = modelType.VisibleMembers().OfType<CodeProperty>().Single(x => x.Name == Model.PrimaryKey);
+#>
+    public class <#= modelName #>Repository : I<#= modelName #>Repository
+    {
+        <#= contextName #> context = new <#= contextName #>();
+
+        public IQueryable<<#= modelName #>> All
+        {
+			get { return context.<#= modelNamePlural #>; }
+        }
+
+        public IQueryable<<#= modelName #>> AllIncluding(params Expression<Func<<#= modelName #>, object>>[] includeProperties)
+        {
+			// Todo: Support eager loading
+            return context.<#= modelNamePlural #>;
+        }
+
+        public <#= modelName #> Find(<#= primaryKeyProperty.Type.AsString #> id)
+        {
+            return context.<#= modelNamePlural #>.SingleOrDefault(x => x.<#= Model.PrimaryKey #> == id);
+        }
+
+        public void InsertOrUpdate(<#= modelName #> <#= modelName.ToLower() #>)
+        {
+            if (<#= modelName.ToLower() #>.<#= Model.PrimaryKey #> == default(<#= primaryKeyProperty.Type.AsString #>)) {
+                // New entity
+<# if(primaryKeyProperty.Type.AsString == "System.Guid") { #>
+				<#= modelName.ToLower() #>.<#= primaryKeyProperty.Name #> = Guid.NewGuid();
+<# } #>
+                context.<#= modelNamePlural #>.InsertOnSubmit(<#= modelName.ToLower() #>);
+            } else {
+                // Existing entity
+                context.<#= modelNamePlural #>.Attach(<#= modelName.ToLower() #>, true);
+            }
+        }
+
+        public void Delete(<#= primaryKeyProperty.Type.AsString #> id)
+        {
+            var itemToDelete = Find(id);
+            context.<#= modelNamePlural #>.DeleteOnSubmit(itemToDelete);
+        }
+
+        public void Save()
+        {
+            context.SaveChanges();
+        }
+    }
+
+	public interface I<#= modelName #>Repository
+    {
+		IQueryable<<#= modelName #>> All { get; }
+		IQueryable<<#= modelName #>> AllIncluding(params Expression<Func<<#= modelName #>, object>>[] includeProperties);
+		<#= modelName #> Find(<#= primaryKeyProperty.Type.AsString #> id);
+		void InsertOrUpdate(<#= modelName #> <#= modelName.ToLower() #>);
+        void Delete(<#= primaryKeyProperty.Type.AsString #> id);
+        void Save();
+    }
+}

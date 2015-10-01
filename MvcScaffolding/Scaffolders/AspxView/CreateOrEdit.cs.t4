@@ -1,0 +1,53 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output extension="ascx" #>
+<#@ assembly name="System.ComponentModel.DataAnnotations" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data.Entity" #>
+<#@ assembly name="System.Data.Linq" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.ComponentModel.DataAnnotations" #>
+<#@ import namespace="System.Data.Linq.Mapping" #>
+<#@ import namespace="System.Data.Objects.DataClasses" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Reflection" #>
+<# 
+	var viewDataType = (EnvDTE.CodeType) Model.ViewDataType; 
+	var mvcViewDataTypeGenericString = (viewDataType != null) ? "<" + viewDataType.FullName + ">" : "<dynamic>";
+#>
+<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<#= mvcViewDataTypeGenericString #>" %>
+
+<#
+foreach (ModelProperty property in GetModelProperties(Model.ViewDataType, false)) {
+    if (!property.IsPrimaryKey && !property.IsForeignKey && !property.IsReadOnly) {
+#>
+<div class="editor-label">
+    <%: Html.LabelFor(model => model.<#= property.Name #>) %>
+</div>
+<div class="editor-field">
+    <%: Html.EditorFor(model => model.<#= property.Name #>) %>
+    <%: Html.ValidationMessageFor(model => model.<#= property.Name #>) %>
+</div>
+
+<#
+    }
+}
+#>
+<#
+foreach (RelatedEntityInfo relation in ParentRelations) {
+#>
+<div class="editor-label">
+    <#= relation.RelationName #>
+</div>
+<div class="editor-field">
+    <%: Html.DropDownListFor(model => model.<#= relation.RelationProperty.Name #>, ((IEnumerable<<#= relation.RelatedEntityType.FullName #>>)ViewBag.Possible<#= relation.RelationNamePlural #>).Select(option => new SelectListItem {
+		Text = <#= GetValueExpression("option", relation.RelatedEntityType) #>, 
+        Value = option.<#= relation.RelatedEntityPrimaryKeyName #>.ToString(),
+        Selected = (Model != null) && (option.<#= relation.RelatedEntityPrimaryKeyName #> == Model.<#= relation.RelationProperty.Name #>)
+    }), "Choose...") %>
+	<%: Html.ValidationMessageFor(model => model.<#= relation.RelationProperty.Name #>) %>
+</div>
+<#
+}
+#>

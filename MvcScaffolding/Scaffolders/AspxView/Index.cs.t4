@@ -1,0 +1,141 @@
+﻿<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output extension="aspx" #>
+<#@ assembly name="System.ComponentModel.DataAnnotations" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Data.Entity" #>
+<#@ assembly name="System.Data.Linq" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.ComponentModel.DataAnnotations" #>
+<#@ import namespace="System.Data.Linq.Mapping" #>
+<#@ import namespace="System.Data.Objects.DataClasses" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Reflection" #>
+<# var viewDataType = (EnvDTE.CodeType) Model.ViewDataType; #>
+<#
+string mvcViewDataTypeGenericString = (viewDataType != null) ? "<IEnumerable<" + viewDataType.FullName + ">>" : "<IEnumerable<dynamic>>";
+int CPHCounter = 1;
+#>
+<#
+if(Model.IsContentPage) {
+#>
+<%@ Page Title="" Language="C#" MasterPageFile="~<#= Model.Layout #>" Inherits="System.Web.Mvc.ViewPage<#= mvcViewDataTypeGenericString #>" %>
+
+<#
+    foreach(string cphid in Model.SectionNames) {
+        if(cphid.Equals("TitleContent", StringComparison.OrdinalIgnoreCase)) {
+#>
+<asp:Content ID="Content<#= CPHCounter #>" ContentPlaceHolderID="<#= cphid #>" runat="server">
+    <#= Model.ViewName #>
+</asp:Content>
+
+<#
+            CPHCounter++;
+        }
+    }
+#>
+<asp:Content ID="Content<#= CPHCounter #>" ContentPlaceHolderID="<#= Model.PrimarySectionName #>" runat="server">
+
+<h2><#= Model.ViewName #></h2>
+
+<#
+} else {
+#>
+<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<#= mvcViewDataTypeGenericString #>" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title><#= Model.ViewName #></title>
+</head>
+<body>
+<#
+    PushIndent("    ");
+}
+#>
+<p>
+    <%: Html.ActionLink("Create New", "Create") %>
+</p>
+<table>
+    <tr>
+        <th></th>
+<#
+List<ModelProperty> properties = GetModelProperties(Model.ViewDataType, true);
+foreach (ModelProperty property in properties) {
+    if (!property.IsPrimaryKey && !property.IsForeignKey) {
+#>
+        <th>
+            <#= property.Name #>
+        </th>
+<#
+    }
+}
+#>
+    </tr>
+
+<% foreach (var item in Model) { %>
+    <tr>
+<#
+if (!String.IsNullOrEmpty(Model.PrimaryKeyName)) {
+#>
+        <td>
+            <%: Html.ActionLink("Edit", "Edit", new { id=item.<#= Model.PrimaryKeyName #> }) %> |
+            <%: Html.ActionLink("Details", "Details", new { id=item.<#= Model.PrimaryKeyName #> }) %> |
+            <%: Html.ActionLink("Delete", "Delete", new { id=item.<#= Model.PrimaryKeyName #> }) %>
+        </td>
+<#
+} else {
+#>
+        <td>
+            <%: Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) %> |
+            <%: Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) %> |
+            <%: Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }) %>
+        </td>
+<#
+}
+    
+foreach (ModelProperty property in properties) {
+    if (!property.IsPrimaryKey && !property.IsForeignKey) {
+#>
+        <td>
+			<%: <#= property.ValueExpression.Replace("Model.", "item.") #> %>
+        </td>
+<#
+    }
+}
+#>
+    </tr>  
+<% } %>
+
+</table>
+<#
+// The following code closes the asp:Content tag used in the case of a master page and the body and html tags in the case of a regular view page
+#>
+<#
+if(Model.IsContentPage) {
+#>
+
+</asp:Content>
+<#
+    foreach(string cphid in Model.SectionNames) {
+        if(!cphid.Equals("TitleContent", StringComparison.OrdinalIgnoreCase) && !cphid.Equals(Model.PrimarySectionName, StringComparison.OrdinalIgnoreCase)) {
+            CPHCounter++;
+#>
+
+<asp:Content ID="Content<#= CPHCounter #>" ContentPlaceHolderID="<#= cphid #>" runat="server">
+</asp:Content>
+<#
+        }
+    }
+#>
+<#
+} else if(!Model.IsContentPage) {
+    ClearIndent();
+#>
+</body>
+</html>
+<#
+}
+#>
+

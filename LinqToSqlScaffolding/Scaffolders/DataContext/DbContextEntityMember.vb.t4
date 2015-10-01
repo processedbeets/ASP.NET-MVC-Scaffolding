@@ -1,0 +1,7 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+
+Public ReadOnly Property <#= Model.EntityTypeNamePluralized #> As Table(Of <#= ((EnvDTE.CodeType)Model.EntityType).FullName #>)
+	Get 
+		Return dataContext.GetTable(Of Global.<#= ((EnvDTE.CodeType)Model.EntityType).FullName #>)()
+	End Get
+End Property

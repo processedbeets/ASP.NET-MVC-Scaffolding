@@ -1,0 +1,19 @@
+<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
+<#@ Output Extension="vb" #>
+Imports System.Data.Linq
+Imports System.Configuration
+
+<#= T4Scaffolding.Namespaces.BeginVb(Model.DbContextNamespace, Model.DefaultNamespace) #>
+    Public Partial Class <#= Model.DbContextType #>
+        Private ReadOnly dataContext As DataContext
+
+		Public Sub New()
+		    Dim connectionString = ConfigurationManager.ConnectionStrings("ApplicationServices").ConnectionString
+		    dataContext = New DataContext(connectionString)
+		End Sub
+
+        Public Sub SaveChanges()
+            dataContext.SubmitChanges()
+        End Sub
+    End Class
+<#= T4Scaffolding.Namespaces.EndVb(Model.DbContextNamespace, Model.DefaultNamespace) #>
