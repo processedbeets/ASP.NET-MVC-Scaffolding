@@ -32,6 +32,7 @@ function CountSolutionFilesByExtension($extension) {
 	$files = (Get-Project).DTE.Solution `
 		| ?{ $_.FileName } `
 		| %{ [System.IO.Path]::GetDirectoryName($_.FileName) } `
+		| ?{$_}`
 		| %{ [System.IO.Directory]::EnumerateFiles($_, "*." + $extension, [System.IO.SearchOption]::AllDirectories) }
 	($files | Measure-Object).Count
 }

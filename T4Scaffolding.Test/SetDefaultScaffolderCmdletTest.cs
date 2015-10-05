@@ -155,5 +155,18 @@ namespace T4Scaffolding.Test
                 Project = "anyProject"
             }.GetResults<DefaultScaffolderConfigEntry>();
         }
+
+        [TestMethod]
+        public void ShouldBeAbleToObtainADteObject()
+        {
+
+            //var scaffolder = new ScaffoldingSolutionManager("defaultProjectName");
+
+            // Arrange
+            
+
+            // Act / Assert
+            
+        }
     }
 }

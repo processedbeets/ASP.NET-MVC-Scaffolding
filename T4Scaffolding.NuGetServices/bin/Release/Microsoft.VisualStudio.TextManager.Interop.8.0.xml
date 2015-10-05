@@ -7,11 +7,11 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.__tagVSCOLORDATA">
       <summary>Specifies a type of color value: foreground, background, or line color. </summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__tagVSCOLORDATA.CD_FOREGROUND">
-      <summary>Specifies the foreground color.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__tagVSCOLORDATA.CD_BACKGROUND">
       <summary>Specifies the background color.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__tagVSCOLORDATA.CD_FOREGROUND">
+      <summary>Specifies the foreground color.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__tagVSCOLORDATA.CD_LINECOLOR">
       <summary>Specifies the line color (used when the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsHiColorItem" /> interface is implemented on the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsPackageDefinedTextMarkerType" /> interface).</summary>
@@ -25,23 +25,23 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS2">
       <summary>Provides additional members for <see cref="T:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS" />.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS2.FR_RegExprLineBreaks">
-      <summary>Match line breaks by using regular expressions.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS2.FR_BlockThread">
       <summary>Blocks the thread during a search.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS2.FR_DoNotUpdateUI">
       <summary>Do not update visual user interface elements. </summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS2.FR_RegExprLineBreaks">
+      <summary>Match line breaks by using regular expressions.</summary>
+    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT2">
       <summary>Provides additional members for the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT" /> enumeration.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT2.VSFR_ReplaceIncompleteEOL">
-      <summary>The user tried to replace only the CR of the LF of a line with a CR-LF ending.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT2.VSFR_CancelledBeforeReplacementsMade">
       <summary>The replace operation was cancelled before any replacement were made.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT2.VSFR_ReplaceIncompleteEOL">
+      <summary>The user tried to replace only the CR of the LF of a line with a CR-LF ending.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.__VSFTPROPID2">
       <summary>Provides additional members for the VSFTPROPID enumeration.</summary>
@@ -52,8 +52,11 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop._BufferCoordinatorMappingMode">
       <summary>Specifies the buffer coordinator mapping mode for contained languages.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop._BufferCoordinatorMappingMode.BCMM_NORMAL">
-      <summary>Indicates the default mode, in which the primary span equals the secondary span.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop._BufferCoordinatorMappingMode.BCMM_ENTIREBUFFER">
+      <summary>Indicates that the buffer is a single span, so no markers are required. This is a special mode; if you create a marker to track the entire buffer, the marker will be deleted when the user deletes the contents of the entire buffer, and all subsequent marker events are lost. There is no way to create a marker that is wider than the buffer. This mode supersedes any other bit flags set.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop._BufferCoordinatorMappingMode.BCMM_EXTENDED">
+      <summary>A combination of <see cref="F:Microsoft.VisualStudio.TextManager.Interop._BufferCoordinatorMappingMode.BCMM_EXTENDEDLEFT" /> and <see cref="F:Microsoft.VisualStudio.TextManager.Interop._BufferCoordinatorMappingMode.BCMM_EXTENDEDRIGHT" />.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop._BufferCoordinatorMappingMode.BCMM_EXTENDEDLEFT">
       <summary>Indicates that the primary span actually has an additional character at the beginning, but only the characters after that additional character are replicated to the secondary span. This mode is used to prevent deletion of text markers when one of the spans collapses into 0 characters, for example, when the user deletes everything in the span range. In the extended left mode, the primary span includes the '&gt;' from the opening &lt;script&gt;tag. Normally this mode should be changed only when there are no mappings. If the mapping mode is changed when the buffer coordinator already has span mappings, the result is unpredictable.</summary>
@@ -61,11 +64,8 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop._BufferCoordinatorMappingMode.BCMM_EXTENDEDRIGHT">
       <summary>Indicates that the primary span actually has an additional character at the end, but only the characters before that additional character are replicated to the secondary span. This mode is used to prevent deletion of text markers when one of the spans collapses into 0 characters, for example, when the user deletes everything in the span range. In extended right mode, the primary span includes the '&lt;' from the closing &lt;/script&gt; tag. Normally this mode should be changed only when there are no mappings. If the mapping mode is changed when the buffer coordinator already has span mappings, the result is unpredictable.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop._BufferCoordinatorMappingMode.BCMM_EXTENDED">
-      <summary>A combination of <see cref="F:Microsoft.VisualStudio.TextManager.Interop._BufferCoordinatorMappingMode.BCMM_EXTENDEDLEFT" /> and <see cref="F:Microsoft.VisualStudio.TextManager.Interop._BufferCoordinatorMappingMode.BCMM_EXTENDEDRIGHT" />.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop._BufferCoordinatorMappingMode.BCMM_ENTIREBUFFER">
-      <summary>Indicates that the buffer is a single span, so no markers are required. This is a special mode; if you create a marker to track the entire buffer, the marker will be deleted when the user deletes the contents of the entire buffer, and all subsequent marker events are lost. There is no way to create a marker that is wider than the buffer. This mode supersedes any other bit flags set.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop._BufferCoordinatorMappingMode.BCMM_NORMAL">
+      <summary>Indicates the default mode, in which the primary span equals the secondary span.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop._codewindowbehaviorflags">
       <summary>Represents the different behaviors of a code window.</summary>
@@ -100,11 +100,11 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop._ExpansionToken">
       <summary>Specifies an expansion path typically associated with code snippet locations.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop._ExpansionToken.ET_MyDocs">
-      <summary>The user document folder where Visual Studio stores user-specific settings, for example, "C:\Documents and Settings\[username]\My Documents\Visual Studio 2005". Code snippets will appear under that path in "Code Snippets\[languageName]\My Code Snippets", where [languageName] is a language name such as "C#".</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop._ExpansionToken.ET_InstallRoot">
       <summary>The installation root for Visual Studio, for example, "C:\Program Files\Microsoft Visual Studio 10".</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop._ExpansionToken.ET_MyDocs">
+      <summary>The user document folder where Visual Studio stores user-specific settings, for example, "C:\Documents and Settings\[username]\My Documents\Visual Studio 2005". Code snippets will appear under that path in "Code Snippets\[languageName]\My Code Snippets", where [languageName] is a language name such as "C#".</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop._HighlightMatchingBraceFlags">
       <summary>Represents different options for highlighting matching braces.</summary>
@@ -157,11 +157,11 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.CODEMEMBERTYPE">
       <summary>Used to specify the type of code members that are to be returned from a list of code members. </summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.CODEMEMBERTYPE.CODEMEMBERTYPE_EVENTS">
-      <summary>Specifies an event type.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.CODEMEMBERTYPE.CODEMEMBERTYPE_EVENT_HANDLERS">
       <summary>Specifies an event handler type.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.CODEMEMBERTYPE.CODEMEMBERTYPE_EVENTS">
+      <summary>Specifies an event type.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.CODEMEMBERTYPE.CODEMEMBERTYPE_USER_FUNCTIONS">
       <summary>Specifies a user function type.</summary>
@@ -169,14 +169,14 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.COMMONLANGUAGEBLOCK">
       <summary>Represents the kind of code block (try,catch, finally) used in <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageDebugInfo2.QueryCommonLanguageBlock(Microsoft.VisualStudio.TextManager.Interop.IVsTextBuffer,System.Int32,System.Int32,System.UInt32,System.Int32@)" />.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COMMONLANGUAGEBLOCK.CLB_TRY_BLOCK">
-      <summary>The try block.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.COMMONLANGUAGEBLOCK.CLB_EXCEPTION_BLOCK">
       <summary>The exception block.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.COMMONLANGUAGEBLOCK.CLB_FINAL_BLOCK">
       <summary>The finally block</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COMMONLANGUAGEBLOCK.CLB_TRY_BLOCK">
+      <summary>The try block.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.ContainedLanguageRefreshMode">
       <summary>Used to specify the recompilation mode for a contained language.</summary>
@@ -271,20 +271,20 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.IntellisenseHostFlags">
       <summary>Specifies IntelliSense host flags.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.IntellisenseHostFlags.IHF_READONLYCONTEXT">
-      <summary>Indicates the context buffer is read-only.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.IntellisenseHostFlags.IHF_FORCECOMMITTOCONTEXT">
+      <summary>Indicates that the context text can be committed to a read-only buffer.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.IntellisenseHostFlags.IHF_NOSEPARATESUBJECT">
       <summary>Indicates that there is no subject and the context buffer contains the IntelliSense target. This flag implies that the <see cref="F:Microsoft.VisualStudio.TextManager.Interop.IntellisenseHostFlags.IHF_READONLYCONTEXT" /> is not specified.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.IntellisenseHostFlags.IHF_SINGLELINESUBJECT">
-      <summary>Indicates the subject text must be displayed on a single line.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.IntellisenseHostFlags.IHF_FORCECOMMITTOCONTEXT">
-      <summary>Indicates that the context text can be committed to a read-only buffer.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.IntellisenseHostFlags.IHF_OVERTYPE">
       <summary>Indicates that any editing (in the subject or context fields) should be done in the overwrite mode (otherwise, editing is done in the insert mode).</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.IntellisenseHostFlags.IHF_READONLYCONTEXT">
+      <summary>Indicates the context buffer is read-only.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.IntellisenseHostFlags.IHF_SINGLELINESUBJECT">
+      <summary>Indicates the subject text must be displayed on a single line.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.IPersistFileCheckSum">
       <summary>Calculates the check sum for the file representation of the associated text buffer.</summary>
@@ -2502,17 +2502,17 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.LINESTYLE2">
       <summary>Provides additional members for the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.LINESTYLE" /> enumeration.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.LINESTYLE2.LI_SMARTTAGFACT">
-      <summary>Line style is smart tag factoid.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.LINESTYLE2.LI_SMARTTAGFACTSIDE">
-      <summary>Line style is smart tag factoid side.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.LINESTYLE2.LI_SMARTTAGEPHEM">
       <summary>Line style is smart tag ephemeral.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.LINESTYLE2.LI_SMARTTAGEPHEMSIDE">
       <summary>Line style is smart tag ephemeral side.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.LINESTYLE2.LI_SMARTTAGFACT">
+      <summary>Line style is smart tag factoid.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.LINESTYLE2.LI_SMARTTAGFACTSIDE">
+      <summary>Line style is smart tag factoid side.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.LinkedTransactionFlags2">
       <summary>Provides additional members to the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.LinkedTransactionFlags" /> enumeration.</summary>
@@ -2526,11 +2526,11 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERBEHAVIORFLAGS2.MB_DONT_DELETE_IF_ZEROLEN">
       <summary>Marker does not delete itself even if text span has zero length.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERBEHAVIORFLAGS2.MB_INHERIT_FOREGROUND">
-      <summary>The marker leaves the foreground color unchanged, inheriting from whatever is "behind" it.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERBEHAVIORFLAGS2.MB_INHERIT_BACKGROUND">
       <summary>The marker leaves the background color unchanged, inheriting from whatever is "behind" it.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERBEHAVIORFLAGS2.MB_INHERIT_FOREGROUND">
+      <summary>The marker leaves the foreground color unchanged, inheriting from whatever is "behind" it.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERBEHAVIORFLAGS2.MB_VIEW_SPECIFIC">
       <summary>The marker appears only in specific views.</summary>
@@ -2544,53 +2544,17 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2">
       <summary>Provides additional members to the MARKERTYPE enumeration.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_WARNING">
-      <summary>The marker for a warning. </summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_SPAN_MAPPING">
-      <summary>Do not use. For internal use only.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_REGION_COLLAPSED_NOGLYPH">
-      <summary>A collapsible region is collapsed, with no glyph drawn.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_REGION_EXPANDED_NOGLYPH">
-      <summary>A collapsible region is expanded, with no glyph drawn.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_EXSTENCIL">
-      <summary>Exstencil support.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_EXSTENCIL_SELECTED">
-      <summary>Exstencil support.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_SMARTTAG_NONVIS">
-      <summary>Invisible smart tag marker.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_SMARTTAG_VIS">
-      <summary>Visible smart tag marker. Priority level: 810.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_TRACK_NONSAVE">
-      <summary>The marker for unsaved tracking changes.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_TRACK_SAVE">
-      <summary>The marker for saved tracking changes.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.DEF_MARKER_COUNT_NEW">
+      <summary>Represents the last MARKERTYPE2 member.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_BOOKMARK_DISABLED">
       <summary>Generic bookmark/tag. </summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_TRACK_PLACEHOLDER">
-      <summary>Invisible placeholder used to allow concatenation of adjacent track changes markers.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_SMARTTAG_FACTOID">
-      <summary>The marker for smart tags that are valid for a long period of time, and are independent of user actions.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_SMARTTAG_EPHEMERAL">
-      <summary>The marker for temporary smart tags, that are valid for a short length of time.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_BRACE_MATCHING">
       <summary>The marker for matching braces.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_EXSTENCIL_ENDMARKER">
-      <summary>Exstencil support.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_BRACE_MATCHING_BOLD">
+      <summary>The marker for bolding the matching braces.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_CODEDEFWIN_BACKGROUND">
       <summary>The marker for the background of a code definition window.</summary>
@@ -2598,38 +2562,65 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_CODEDEFWIN_SELECTION">
       <summary>The marker for a selection in a code definition window.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_HIGHLIGHT_PATH">
-      <summary>The marker that highlights the path.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_BRACE_MATCHING_BOLD">
-      <summary>The marker for bolding the matching braces.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_REFACTORING_BACKGROUND">
-      <summary>The background marker for the refactoring window.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_EXSTENCIL">
+      <summary>Exstencil support.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_EXSTENCIL_DEPFIELD">
       <summary>The marker around a code snippet dependent field.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_REFACTORING_FIELD">
-      <summary>The marker that highlights the line being refactored.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_EXSTENCIL_ENDMARKER">
+      <summary>Exstencil support.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_EXSTENCIL_SELECTED">
+      <summary>Exstencil support.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_HIGHLIGHT_PATH">
+      <summary>The marker that highlights the path.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_REFACTORING_BACKGROUND">
+      <summary>The background marker for the refactoring window.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_REFACTORING_DEPFIELD">
       <summary>The marker that highlights other items that are being refactored.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.DEF_MARKER_COUNT_NEW">
-      <summary>Represents the last MARKERTYPE2 member.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_REFACTORING_FIELD">
+      <summary>The marker that highlights the line being refactored.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_REGION_COLLAPSED_NOGLYPH">
+      <summary>A collapsible region is collapsed, with no glyph drawn.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_REGION_EXPANDED_NOGLYPH">
+      <summary>A collapsible region is expanded, with no glyph drawn.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_SMARTTAG_EPHEMERAL">
+      <summary>The marker for temporary smart tags, that are valid for a short length of time.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_SMARTTAG_FACTOID">
+      <summary>The marker for smart tags that are valid for a long period of time, and are independent of user actions.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_SMARTTAG_NONVIS">
+      <summary>Invisible smart tag marker.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_SMARTTAG_VIS">
+      <summary>Visible smart tag marker. Priority level: 810.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_SPAN_MAPPING">
+      <summary>Do not use. For internal use only.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_TRACK_NONSAVE">
+      <summary>The marker for unsaved tracking changes.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_TRACK_PLACEHOLDER">
+      <summary>Invisible placeholder used to allow concatenation of adjacent track changes markers.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_TRACK_SAVE">
+      <summary>The marker for saved tracking changes.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE2.MARKER_WARNING">
+      <summary>The marker for a warning. </summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL2">
       <summary>Provides additional members to the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL" /> enumeration.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL2.MV_SMARTTAG">
-      <summary>Marker for smart tags.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL2.MV_TRACK">
-      <summary>Marker for change tracking.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL2.MV_ROUNDEDBORDER">
-      <summary>Draw a rounded border.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL2.MV_BOLDTEXT">
       <summary>Draw foreground text in bold.</summary>
@@ -2643,8 +2634,17 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL2.MV_FORCE_CLOSEST_IF_HIDDEN">
       <summary>Forces a MB_MULTILINESPAN or MB_LINESPAN marker to paint to the closest viewable location on the line.  This setting has no meaning if the marker is not MV_BORDER.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL2.MV_ROUNDEDBORDER">
+      <summary>Draw a rounded border.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL2.MV_SELECT_WHOLE_LINE">
       <summary>Forces a MB_MULTILINESPAN or MB_LINESPAN marker to paint a full line even if part of the marker is hidden. This setting has no meaning if the marker is not MV_BORDER.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL2.MV_SMARTTAG">
+      <summary>Marker for smart tags.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL2.MV_TRACK">
+      <summary>Marker for change tracking.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegionEx">
       <summary>Creates a new outline or hidden text region over the specified text span.</summary>
@@ -2736,20 +2736,20 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags2">
       <summary>Provides additional members to the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags" /> enumeration.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags2.VIF_READONLY">
-      <summary>Indicates that the view should be read-only.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags2.VIF_ACTIVEINMODALSTATE">
       <summary>Indicates that the view should be read-only active in a modal state. This state allows commands to be active, even when the shell is in a modal state.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags2.VIF_READONLY">
+      <summary>Indicates that the view should be read-only.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags2.VIF_SUPPRESS_STATUS_BAR_UPDATE">
       <summary>Indicates that the view should suppress status bar updates.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags2.VIF_SUPPRESSTRACKCHANGES">
-      <summary>Indicates that the view should not ask the buffer to track changes.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags2.VIF_SUPPRESSBORDER">
       <summary>Indicates that the view should suppress drawing of the border. This setting is intended for use when view is hosted in a dialog.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags2.VIF_SUPPRESSTRACKCHANGES">
+      <summary>Indicates that the view should not ask the buffer to track changes.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags2.VIF_SUPPRESSTRACKGOBACK">
       <summary>Indicates that view should suppress go-back tracking. This setting is intended for use when the view is hosted in a tool window, for example.</summary>
@@ -2763,11 +2763,11 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.TipWindowFlags2">
       <summary>Provides additional members for the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.TipWindowFlags" /> enumeration.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TipWindowFlags2.UTW_TIMER">
-      <summary>Tip window has timer.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TipWindowFlags2.UTW_EXPANDED">
       <summary>Tip window is expanded.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TipWindowFlags2.UTW_TIMER">
+      <summary>Tip window has timer.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.VIEWPREFERENCES2">
       <summary>Provides additional members for the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.VIEWPREFERENCES" /> structure.</summary>
@@ -3210,11 +3210,11 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.VSTFF2">
       <summary>Provides additional members to the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.__VSTFF" /> enumeration.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSTFF2.VSTFF_NOUTF8_NOSIG">
-      <summary>Turn off auto-detection of UTF8 without sig.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSTFF2.VSTFF_KEEPANSI">
       <summary>If text appears to be ANSI (American National Standards Institute), don't convert it.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSTFF2.VSTFF_NOUTF8_NOSIG">
+      <summary>Turn off auto-detection of UTF8 without sig.</summary>
     </member>
   </members>
 </doc>

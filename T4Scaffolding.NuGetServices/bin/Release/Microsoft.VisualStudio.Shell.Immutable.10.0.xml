@@ -109,14 +109,14 @@
     <member name="T:Microsoft.VisualStudio.Shell.RegistrationMethod">
       <summary>Specifies how the assembly should be registered or located.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.Shell.RegistrationMethod.Default">
-      <summary>Should be used only by tools.</summary>
+    <member name="F:Microsoft.VisualStudio.Shell.RegistrationMethod.Assembly">
+      <summary>The assembly should be in the GAC or in the PrivateAssemblies folder.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.Shell.RegistrationMethod.CodeBase">
       <summary>The path to the assembly should be stored in the registry and used to locate the assembly at runtime.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.Shell.RegistrationMethod.Assembly">
-      <summary>The assembly should be in the GAC or in the PrivateAssemblies folder.</summary>
+    <member name="F:Microsoft.VisualStudio.Shell.RegistrationMethod.Default">
+      <summary>Should be used only by tools.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.Shell.SVsServiceProvider">
       <summary>Represents a Visual Studio service provider.</summary>

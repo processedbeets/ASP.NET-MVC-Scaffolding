@@ -16,29 +16,20 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.__VSFINDBUFFERFLAGS">
       <summary>Indicates that a buffer boundary begins or ends a line, without requiring white space characters in the buffer. </summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDBUFFERFLAGS.VSFB_StartOfLine">
-      <summary>The buffer starts a line.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDBUFFERFLAGS.VSFB_EndOfLine">
-      <summary>The buffer ends a line.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDBUFFERFLAGS.FINDBUFFER_EndOfLine">
+      <summary>Deprecated. Do not use.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDBUFFERFLAGS.FINDBUFFER_StartOfLine">
       <summary>Deprecated. Do not use.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDBUFFERFLAGS.FINDBUFFER_EndOfLine">
-      <summary>Deprecated. Do not use.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDBUFFERFLAGS.VSFB_EndOfLine">
+      <summary>The buffer ends a line.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDBUFFERFLAGS.VSFB_StartOfLine">
+      <summary>The buffer starts a line.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.__VSFINDERROR">
       <summary>Specifies errors in find operation. </summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDERROR.VSFE_Syntax">
-      <summary>There was a syntax error in expression</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDERROR.VSFE_NotSupported">
-      <summary>Options were not supported.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDERROR.VSFE_NotInitialized">
-      <summary>Search was not initialized.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDERROR.VSFE_Failure">
       <summary>An error occurred.</summary>
@@ -46,128 +37,50 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDERROR.VSFE_NoError">
       <summary>No error occurred.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDERROR.VSFE_NotInitialized">
+      <summary>Search was not initialized.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDERROR.VSFE_NotSupported">
+      <summary>Options were not supported.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDERROR.VSFE_Syntax">
+      <summary>There was a syntax error in expression</summary>
+    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.__VSFINDHOW">
       <summary>Specifies how to find a match. </summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDHOW.VSFH_Ambient">
       <summary>Use ambient/default options.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDHOW.VSFH_Wrap">
-      <summary>Wrap around image boundary.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDHOW.VSFH_SetMatch">
+      <summary>Search for match at span: set match span and tags.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDHOW.VSFH_TryMatch">
       <summary>Search for match at span: don't change state (current match span, tags).</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDHOW.VSFH_SetMatch">
-      <summary>Search for match at span: set match span and tags.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDHOW.VSFH_Wrap">
+      <summary>Wrap around image boundary.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS">
       <summary>Specifies text find options.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_OptionMask">
-      <summary>Options. FR_MatchCase | FR_WholeWord | FR_Hidden | FR_Backwards | FR_Selection | FR_Block | FR_KeepCase | FR_SubFolders | FR_KeepOpen | FR_NameOnly.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_ActionMask">
+      <summary>Actions. FR_MarkAll | FR_Find | FR_FindAll | FR_Replace | FR_ReplaceAll.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_MatchCase">
-      <summary>Match case in search.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_WholeWord">
-      <summary>Match whole word.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Hidden">
-      <summary>Search hidden text.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_All">
+      <summary>All options.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Backwards">
       <summary>Search in reverse</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Selection">
-      <summary>Search selection only.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Block">
       <summary>Current procedure/block</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_KeepCase">
-      <summary>Keep case on replace.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_SubFolders">
-      <summary>Search subfolders.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_KeepOpen">
-      <summary>Keep modified files open.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_NameOnly">
-      <summary>Display filename only.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_SyntaxMask">
-      <summary>FR_Plane | FR_Wildcard | FR_RegExpr.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Plain">
-      <summary>Match exact string.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Wildcard">
-      <summary>Match wild cards.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_RegExpr">
-      <summary>Match regular expressions.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_TargetMask">
-      <summary>FR_Document | FR_OpenDocuments | FR_Files | FR_Project | FR_Solution.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Document">
-      <summary>Search current document</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_OpenDocuments">
-      <summary>Search open documents.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Files">
-      <summary>Find in files.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Project">
-      <summary>Find in project.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Solution">
-      <summary>Find in solution.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_ActionMask">
-      <summary>Actions. FR_MarkAll | FR_Find | FR_FindAll | FR_Replace | FR_ReplaceAll.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_MarkAll">
-      <summary>Mark all matches.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Find">
-      <summary>Find next.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_FindAll">
-      <summary>Find all (bulk find)</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Replace">
-      <summary>Replace text found.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_ReplaceAll">
-      <summary>Replace all text found.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_InternalMask">
-      <summary>Internal options (no UI) FR_ResetPosition | FR_FromStart | FR_OneMatchPerLine | FR_Report | FR_SelectionDefault</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_ResetPosition">
-      <summary>Find new.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_FromStart">
-      <summary>Search from beginning of doc.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_OneMatchPerLine">
-      <summary>Return only one match per line (bulk find).</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Report">
-      <summary>Generate a results list.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_SelectionDefault">
-      <summary>GetCapabilities: force selection.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_BlockThread">
       <summary>Blocks the thread when doing a search.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_NoFind">
-      <summary>Suppress find.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Capabilities">
+      <summary>FR_OptionSet | FR_SyntaxSet | FR_ActionMask | FR_SelectionDefault</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_CommonOptions">
       <summary>FR_MatchCase | FR_WholeWord | FR_Hidden | FR_KeepCase</summary>
@@ -175,82 +88,145 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_DocOptionSet">
       <summary>FR_CommonOptions | FR_Backwards | FR_Selection | FR_Block</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Document">
+      <summary>Search current document</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_FIFOptionSet">
       <summary>FR_CommonOptions | FR_SubFolders | FR_KeepOpen | FR_NameOnly</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_OptionSet">
-      <summary>FR_CommonOptions | FR_Backwards | FR_Selection | FR_Block</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Files">
+      <summary>Find in files.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_SyntaxSet">
-      <summary>FR_Plain | FR_Wildcard | FR_RegExpr</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Find">
+      <summary>Find next.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Capabilities">
-      <summary>FR_OptionSet | FR_SyntaxSet | FR_ActionMask | FR_SelectionDefault</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_FindAll">
+      <summary>Find all (bulk find)</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_All">
-      <summary>All options.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_FromStart">
+      <summary>Search from beginning of doc.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Hidden">
+      <summary>Search hidden text.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_InternalMask">
+      <summary>Internal options (no UI) FR_ResetPosition | FR_FromStart | FR_OneMatchPerLine | FR_Report | FR_SelectionDefault</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_KeepCase">
+      <summary>Keep case on replace.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_KeepOpen">
+      <summary>Keep modified files open.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_MarkAll">
+      <summary>Mark all matches.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_MatchCase">
+      <summary>Match case in search.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_NameOnly">
+      <summary>Display filename only.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_NoFind">
+      <summary>Suppress find.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_None">
       <summary>No options.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Procedure">
-      <summary>Same as FR_Block.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_OneMatchPerLine">
+      <summary>Return only one match per line (bulk find).</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_OpenDocuments">
+      <summary>Search open documents.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_OptionMask">
+      <summary>Options. FR_MatchCase | FR_WholeWord | FR_Hidden | FR_Backwards | FR_Selection | FR_Block | FR_KeepCase | FR_SubFolders | FR_KeepOpen | FR_NameOnly.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_OptionSet">
+      <summary>FR_CommonOptions | FR_Backwards | FR_Selection | FR_Block</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Pattern">
       <summary>Same as FR_Wildcard.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Plain">
+      <summary>Match exact string.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Procedure">
+      <summary>Same as FR_Block.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Project">
+      <summary>Find in project.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_RegExpr">
+      <summary>Match regular expressions.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Replace">
+      <summary>Replace text found.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_ReplaceAll">
+      <summary>Replace all text found.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Report">
+      <summary>Generate a results list.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_ResetPosition">
+      <summary>Find new.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Selection">
+      <summary>Search selection only.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_SelectionDefault">
+      <summary>GetCapabilities: force selection.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Solution">
+      <summary>Find in solution.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_SubFolders">
+      <summary>Search subfolders.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_SyntaxMask">
+      <summary>FR_Plane | FR_Wildcard | FR_RegExpr.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_SyntaxSet">
+      <summary>FR_Plain | FR_Wildcard | FR_RegExpr</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_TargetMask">
+      <summary>FR_Document | FR_OpenDocuments | FR_Files | FR_Project | FR_Solution.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_WholeWord">
+      <summary>Match whole word.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDOPTIONS.FR_Wildcard">
+      <summary>Match wild cards.</summary>
+    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.__VSFINDPOS">
       <summary>Indicates the search position.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDPOS.VSFP_Start">
-      <summary>The start of the search.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDPOS.VSFP_Current">
       <summary>The current position.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDPOS.VSFP_Wrapped">
-      <summary>The search should wrap to the start.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDPOS.VSFP_ResetCounts">
       <summary>Clear the match counter.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDPOS.VSFP_Start">
+      <summary>The start of the search.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDPOS.VSFP_Wrapped">
+      <summary>The search should wrap to the start.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT">
       <summary>Indicates the result of a find or replace operation.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_NotFound">
-      <summary>The text string was not found.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.FINDREPLACE_RESULT_EndOfDoc">
+      <summary>Deprecated. Do not use.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_Found">
-      <summary>Text string was found.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_Replaced">
-      <summary>The text string was found and replaced.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_EndOfDoc">
-      <summary>Search reached the end of the document</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_EndOfSearch">
-      <summary>Search reached the start.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_FindInFiles">
-      <summary>A background Find in Files was started.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_NoTarget">
-      <summary>No target document was specified or found.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_Error">
-      <summary>An error occurred.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_AndInterrupt">
-      <summary>Search was interrupted with ESC/CANCEL.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_AndReplace">
-      <summary>Returned in combination with Found or NotFound</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_FLAGMASK">
-      <summary>For internal use only.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.FINDREPLACE_RESULT_EndOfSearch">
+      <summary>Deprecated. Do not use.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.FINDREPLACE_RESULT_Failed">
+      <summary>Deprecated. Do not use.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.FINDREPLACE_RESULT_FindInFiles">
       <summary>Deprecated. Do not use.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.FINDREPLACE_RESULT_Found">
@@ -259,23 +235,41 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.FINDREPLACE_RESULT_Replaced">
       <summary>Deprecated. Do not use.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.FINDREPLACE_RESULT_EndOfDoc">
-      <summary>Deprecated. Do not use.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_AndInterrupt">
+      <summary>Search was interrupted with ESC/CANCEL.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.FINDREPLACE_RESULT_EndOfSearch">
-      <summary>Deprecated. Do not use.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_AndReplace">
+      <summary>Returned in combination with Found or NotFound</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.FINDREPLACE_RESULT_FindInFiles">
-      <summary>Deprecated. Do not use.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_EndOfDoc">
+      <summary>Search reached the end of the document</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_EndOfSearch">
+      <summary>Search reached the start.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_Error">
+      <summary>An error occurred.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_FindInFiles">
+      <summary>A background Find in Files was started.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_FLAGMASK">
+      <summary>For internal use only.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_Found">
+      <summary>Text string was found.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_NoTarget">
+      <summary>No target document was specified or found.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_NotFound">
+      <summary>The text string was not found.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULT.VSFR_Replaced">
+      <summary>The text string was found and replaced.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULTLOC">
       <summary>These values denote the window in which the results of a bulk find operation appear.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULTLOC.VSFRL_FindResultList1">
-      <summary>Results go in Find Results 1.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULTLOC.VSFRL_FindResultList2">
-      <summary>Results go in Find Results 2.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULTLOC.FINDREPLACE_RESULTLOC_ResultsList1">
       <summary>Deprecated. Do not use.</summary>
@@ -283,23 +277,29 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULTLOC.FINDREPLACE_RESULTLOC_ResultsList2">
       <summary>Deprecated. Do not use.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULTLOC.VSFRL_FindResultList1">
+      <summary>Results go in Find Results 1.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDRESULTLOC.VSFRL_FindResultList2">
+      <summary>Results go in Find Results 2.</summary>
+    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.__VSFINDSTATE">
       <summary>Specifies the state of a Find operation.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDSTATE.VSFS_Error">
-      <summary>An error occurred.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDSTATE.VSFS_Empty">
       <summary>Find was not initialized.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDSTATE.VSFS_Start">
-      <summary>Find was initialized, and no action was taken.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDSTATE.VSFS_Error">
+      <summary>An error occurred.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDSTATE.VSFS_Found">
       <summary>Find was initialized and the last action was Found.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDSTATE.VSFS_NotFound">
       <summary>Initialized and the last action was Not Found.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDSTATE.VSFS_Start">
+      <summary>Find was initialized, and no action was taken.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFINDSTATE.VSFS_Wrapped">
       <summary>Find wrapped around to the start.</summary>
@@ -310,26 +310,23 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFTNOTIFY.VSFTNOTIFY_CURRENT">
       <summary>This target has become the current target.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFTNOTIFY.VSFTNOTIFY_ENDFIND">
+      <summary>The find/replace operation is complete.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFTNOTIFY.VSFTNOTIFY_NOTCURRENT">
       <summary>This target is no longer the current target.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFTNOTIFY.VSFTNOTIFY_STARTFIND">
       <summary>A find/replace operation is about to start.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFTNOTIFY.VSFTNOTIFY_ENDFIND">
-      <summary>The find/replace operation is complete.</summary>
-    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.__VSFTPROPID">
       <summary>Specifies target properties.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFTPROPID.VSFTPROPID_DocName">
-      <summary>VT_BSTR; the full path of filename/persistence moniker.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFTPROPID.VSFTPROPID_IsDiskFile">
-      <summary>VT_BOOL; VARIANT_TRUE if the object is a file on disk</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFTPROPID.VSFTPROPID_BlockName">
       <summary>VT_BSTR; the name of current block.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFTPROPID.VSFTPROPID_DocName">
+      <summary>VT_BSTR; the full path of filename/persistence moniker.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFTPROPID.VSFTPROPID_InitialPattern">
       <summary>VT_BSTR; the seed Find pattern - the selection is in single line.</summary>
@@ -337,26 +334,17 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFTPROPID.VSFTPROPID_InitialPatternAggressive">
       <summary>VT_BSTR; the seed Find pattern - the selection is in a single line, or text near caret if no selection.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFTPROPID.VSFTPROPID_WindowFrame">
-      <summary>VT_UNKNOWN; a pointer to the window frame (<see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame" />) containing the view being searched.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFTPROPID.VSFTPROPID_IsDiskFile">
+      <summary>VT_BOOL; VARIANT_TRUE if the object is a file on disk</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFTPROPID.VSFTPROPID_IsFindInFilesForegroundOnly">
       <summary>VT_BOOLEAN; indicates that the document must be searched on the foreground thread (UI thread) only. Normally the environment searches on the background thread. The environment does not marshal pointers on a background thread, so if you require that, specify this value instead.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSFTPROPID.VSFTPROPID_WindowFrame">
+      <summary>VT_UNKNOWN; a pointer to the window frame (<see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame" />) containing the view being searched.</summary>
+    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.__VSTFF">
       <summary>Specifies the format of the text file.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSTFF.VSTFF_SIGNATURE">
-      <summary>VS Text File Format file signature (Byte Order Mark, UTF-8 sig.).</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSTFF.VSTFF_DETECT">
-      <summary>Extra analysis to detect encoding.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSTFF.VSTFF_HTML">
-      <summary>HTML.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSTFF.VSTFF_XML">
-      <summary>XML.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSTFF.VSTFF_BINARY">
       <summary>Binary handling.</summary>
@@ -364,8 +352,20 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSTFF.VSTFF_CPMASK">
       <summary>Mask for the codepage portion of VSTFF.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSTFF.VSTFF_DETECT">
+      <summary>Extra analysis to detect encoding.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSTFF.VSTFF_FLAGSMASK">
       <summary>Mask for the flags portion of VSTFF.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSTFF.VSTFF_HTML">
+      <summary>HTML.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSTFF.VSTFF_SIGNATURE">
+      <summary>VS Text File Format file signature (Byte Order Mark, UTF-8 sig.).</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.__VSTFF.VSTFF_XML">
+      <summary>XML.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop._NavigableLocationResolverFlags">
       <summary>Specifies how a location path should be resolved.</summary>
@@ -382,20 +382,20 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop._QuerySendCommitFlags">
       <summary>Specifies whether an ENTER triggers a text change commit event. </summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop._QuerySendCommitFlags.QSCF_DO_SEND_ENTER_COMMIT">
-      <summary>CRLF triggers a commit.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop._QuerySendCommitFlags.QSCF_DO_NOT_SEND_ENTER_COMMIT">
       <summary>CRLF does not trigger a commit.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop._QuerySendCommitFlags.QSCF_DO_SEND_ENTER_COMMIT">
+      <summary>CRLF triggers a commit.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop._vsIndentStyle">
       <summary>Specifies the style of indentation.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop._vsIndentStyle.vsIndentStyleNone">
-      <summary>No indent style.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop._vsIndentStyle.vsIndentStyleDefault">
       <summary>The default style.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop._vsIndentStyle.vsIndentStyleNone">
+      <summary>No indent style.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop._vsIndentStyle.vsIndentStyleSmart">
       <summary>Smart indent.</summary>
@@ -406,11 +406,11 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.ADD_OUTLINE_REGION_FLAGS.AOR_DEFAULT">
       <summary>Removes any existing outlining regions.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ADD_OUTLINE_REGION_FLAGS.AOR_PRESERVE_EXISTING">
-      <summary>Preserves existing outlining regions. New outlining regions are added to those already existing.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.ADD_OUTLINE_REGION_FLAGS.AOR_NON_UNDOABLE">
       <summary>Indicates that the action is not part of the undo/redo stack. For example, this case applies if outlining is done when the document is first loaded.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ADD_OUTLINE_REGION_FLAGS.AOR_PRESERVE_EXISTING">
+      <summary>Preserves existing outlining regions. New outlining regions are added to those already existing.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.AtomicText">
       <summary>Describes an embedded object within a <see cref="T:Microsoft.VisualStudio.TextManager.Interop.LINEDATAEX" /> structure.</summary>
@@ -454,32 +454,32 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.BUFFERSTATEFLAGS">
       <summary>Sets the state of a text buffer.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.BUFFERSTATEFLAGS.BSF_USER_READONLY">
-      <summary>The user marked it as read-only; no editing is allowed.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.BUFFERSTATEFLAGS.BSF_FILESYS_READONLY">
       <summary>Read-only on the file system, possibly under source code control.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.BUFFERSTATEFLAGS.BSF_MODIFIED">
       <summary>The buffer has been modified.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.BUFFERSTATEFLAGS.BSF_SUPPRESS_UI">
-      <summary>Prevent the buffer from showing the UI (false by default).</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.BUFFERSTATEFLAGS.BSF_RESERVED">
       <summary>Reserved for future use.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.BUFFERSTATEFLAGS.BSF_SUPPRESS_UI">
+      <summary>Prevent the buffer from showing the UI (false by default).</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.BUFFERSTATEFLAGS.BSF_USER_READONLY">
+      <summary>The user marked it as read-only; no editing is allowed.</summary>
+    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.CASESELECTION_TYPE">
       <summary>Specifies the case of selected text.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.CASESELECTION_TYPE.CASESELECTION_UPPER">
-      <summary>The text is upper-case.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.CASESELECTION_TYPE.CASESELECTION_LOWER">
       <summary>The text is lower-case.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.CASESELECTION_TYPE.CASESELECTION_TITLE">
       <summary>The text is title case.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.CASESELECTION_TYPE.CASESELECTION_UPPER">
+      <summary>The text is upper-case.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.CHANGE_HIDDEN_REGION_FLAGS">
       <summary>Specifies whether the region is added to the undo/redo stack.</summary>
@@ -502,41 +502,35 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.ChangeClusterFlags">
       <summary>Provides information about a group of undo/redo operations. Used in <see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsChangeClusterEvents" /> calls.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeClusterFlags.CCE_BEFORE_OPEN">
-      <summary>Indicates that the notification is being fired before a cluster has opened.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeClusterFlags.CCE_BEFORE_CLOSE">
-      <summary>Indicates that the notification is being fired before a cluster has closed.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeClusterFlags.CCE_ABORTED">
+      <summary>Indicates that a cluster has been aborted.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeClusterFlags.CCE_AFTER_CLOSE">
       <summary>Indicates that the notification is being fired after a cluster has closed.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeClusterFlags.CCE_UNDO">
-      <summary>Indicates that a cluster is an undo operation.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeClusterFlags.CCE_BEFORE_CLOSE">
+      <summary>Indicates that the notification is being fired before a cluster has closed.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeClusterFlags.CCE_REDO">
-      <summary>Indicates that a cluster is a redo operation.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeClusterFlags.CCE_BEFORE_OPEN">
+      <summary>Indicates that the notification is being fired before a cluster has opened.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeClusterFlags.CCE_FLUSH">
       <summary>Indicates that an early notification was prompted by an explicit flush request.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeClusterFlags.CCE_ABORTED">
-      <summary>Indicates that a cluster has been aborted.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeClusterFlags.CCE_REDO">
+      <summary>Indicates that a cluster is a redo operation.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeClusterFlags.CCE_UNDO">
+      <summary>Indicates that a cluster is an undo operation.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.ChangeCommitGestureFlags">
       <summary>Flags indicating the type of changes made to text that triggered the commit gesture.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeCommitGestureFlags.CCG_SAVE">
-      <summary>Occurs when a file is being saved. A language service can perform any final file fix-ups required and the changes will be persisted in the save.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeCommitGestureFlags.CCG_MULTILINE_CHANGE">
-      <summary>Occurs when a single change covers multiple lines, for example, a paste operation.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeCommitGestureFlags.CCG_CARET_ON_NEW_BUFFER_LINE">
       <summary>Occurs when the caret has moved to a new buffer line. For example, this occurs on a carriage return or when a user clicks on a different line to move the caret.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeCommitGestureFlags.CCG_MASS_REPLACE">
-      <summary>Occurs when the commit is being fired for multiple changes within the affected span. For example, committing a large replace operation or running a wizard that affects multiple places in the file.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeCommitGestureFlags.CCG_DESTRUCTIVEACTION">
+      <summary>Used by the core editor. Editor clients should not use this value.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeCommitGestureFlags.CCG_ENTER_COMMAND">
       <summary>Same as CCG_CARET_ON_NEW_BUFFER_LINE.</summary>
@@ -547,11 +541,17 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeCommitGestureFlags.CCG_LOST_FOCUS">
       <summary>Indicates that the editor window has lost focus.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeCommitGestureFlags.CCG_DESTRUCTIVEACTION">
-      <summary>Used by the core editor. Editor clients should not use this value.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeCommitGestureFlags.CCG_MASS_REPLACE">
+      <summary>Occurs when the commit is being fired for multiple changes within the affected span. For example, committing a large replace operation or running a wizard that affects multiple places in the file.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeCommitGestureFlags.CCG_MULTILINE_CHANGE">
+      <summary>Occurs when a single change covers multiple lines, for example, a paste operation.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeCommitGestureFlags.CCG_PROGRAMMATIC_CHANGE">
       <summary>Signals that the commit is being fired while the editor is running an automation function, for example, if a macro is played back.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ChangeCommitGestureFlags.CCG_SAVE">
+      <summary>Occurs when a file is being saved. A language service can perform any final file fix-ups required and the changes will be persisted in the save.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.ChangeInput">
       <summary>Represents information about a pending change request *before* it has happened.</summary>
@@ -574,14 +574,14 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.CHARFMT">
       <summary>Represents the file encoding.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.CHARFMT.CHARFMT_MBCS">
+      <summary>MBCS encoding.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.CHARFMT.CHARFMT_UNI">
       <summary>Unicode encoding.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.CHARFMT.CHARFMT_UNI_SWAP">
       <summary>Byte-swapped Unicode encoding.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.CHARFMT.CHARFMT_MBCS">
-      <summary>MBCS encoding.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.CHARFMT.CHARFMT_UTF8">
       <summary>UTF-8 with file signature encoding.</summary>
@@ -589,98 +589,98 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX">
       <summary>Specifies the default foreground, background, or line color.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_USERTEXT_FG">
-      <summary>The foreground color for user text.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_USERTEXT_BK">
-      <summary>The background color for user text.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_FIRSTFIXEDCOLOR">
-      <summary>The first fixed color. Beginning of fixed color range.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_AQUAMARINE">
+      <summary>Aquamarine.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_BLACK">
       <summary>Black.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_WHITE">
-      <summary>White.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_MAROON">
-      <summary>Maroon.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_DARKGREEN">
-      <summary>Dark green.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_BLUE">
+      <summary>Blue.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_BROWN">
       <summary>Brown.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_CYAN">
+      <summary>Cyan.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_DARKBLUE">
       <summary>Dark blue.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_PURPLE">
-      <summary>Purple.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_AQUAMARINE">
-      <summary>Aquamarine.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_LIGHTGRAY">
-      <summary>Light gray.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_DARKGRAY">
       <summary>Dark gray.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_RED">
-      <summary>Red.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_DARKGREEN">
+      <summary>Dark green.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_GREEN">
-      <summary>Green.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_YELLOW">
-      <summary>Yellow.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_BLUE">
-      <summary>Blue.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_MAGENTA">
-      <summary>Magenta.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_CYAN">
-      <summary>Cyan.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_LASTFIXEDCOLOR">
-      <summary>The last fixed color. End of fixed color range.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSSEL_FG">
-      <summary>The foreground for selected text.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSSEL_BK">
-      <summary>The background for selected text.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSINACTSEL_FG">
-      <summary>The foreground for inactive selection.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSINACTSEL_BK">
-      <summary>The background for inactive selection.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSWIDGETMGN_BK">
-      <summary>The background for widget margin.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSPLAINTEXT_FG">
-      <summary>The foreground for plain text.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSPLAINTEXT_BK">
-      <summary>The background for plain text.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_PALETTESIZE">
-      <summary>The palette size.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_FIRSTFIXEDCOLOR">
+      <summary>The first fixed color. Beginning of fixed color range.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_FORBIDCUSTOMIZATION">
       <summary>Forbid customization.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSTEXT_FG">
-      <summary>Obsolete. Use CI_USERTEXT_FG instead.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_GREEN">
+      <summary>Green.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_LASTFIXEDCOLOR">
+      <summary>The last fixed color. End of fixed color range.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_LIGHTGRAY">
+      <summary>Light gray.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_MAGENTA">
+      <summary>Magenta.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_MAROON">
+      <summary>Maroon.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_PALETTESIZE">
+      <summary>The palette size.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_PURPLE">
+      <summary>Purple.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_RED">
+      <summary>Red.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSINACTSEL_BK">
+      <summary>The background for inactive selection.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSINACTSEL_FG">
+      <summary>The foreground for inactive selection.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSPLAINTEXT_BK">
+      <summary>The background for plain text.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSPLAINTEXT_FG">
+      <summary>The foreground for plain text.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSSEL_BK">
+      <summary>The background for selected text.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSSEL_FG">
+      <summary>The foreground for selected text.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSTEXT_BK">
       <summary>Obsolete. Use USERTEXT_BK instead.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSTEXT_FG">
+      <summary>Obsolete. Use CI_USERTEXT_FG instead.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_SYSWIDGETMGN_BK">
+      <summary>The background for widget margin.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_USERTEXT_BK">
+      <summary>The background color for user text.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_USERTEXT_FG">
+      <summary>The foreground color for user text.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_WHITE">
+      <summary>White.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORINDEX.CI_YELLOW">
+      <summary>Yellow.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.COLORIZER_ATTRIBUTE">
       <summary>Specifies color attributes of the text.</summary>
@@ -691,20 +691,20 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORIZER_ATTRIBUTE.COLOR_MARKER_MASK">
       <summary>Used internally by the editor. Not used by clients.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORIZER_ATTRIBUTE.HUMAN_TEXT_ATTR">
+      <summary>Text to be treated as natural language text.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORIZER_ATTRIBUTE.LINE_MARKER_MASK">
       <summary>Used internally by the editor. Not used by clients.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORIZER_ATTRIBUTE.PRIVATE_CLIENT_MASK">
       <summary>Reserved for editor-client use.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORIZER_ATTRIBUTE.HUMAN_TEXT_ATTR">
-      <summary>Text to be treated as natural language text.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORIZER_ATTRIBUTE.PRIVATE_EDITOR_MASK">
+      <summary>Top six bits reserved for editor internal use.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORIZER_ATTRIBUTE.SEPARATOR_AFTER_ATTR">
       <summary>Indicates that a visual line separator should follow the character's line.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.COLORIZER_ATTRIBUTE.PRIVATE_EDITOR_MASK">
-      <summary>Top six bits reserved for editor internal use.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.CUSTOM_DROP_HANDLER_FLAGS">
       <summary>Indicates drop status.</summary>
@@ -712,53 +712,53 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.CUSTOM_DROP_HANDLER_FLAGS.CDH_DEFAULT">
       <summary>Successful drop. Indicates that the drop can proceed, or already did so successfully.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.CUSTOM_DROP_HANDLER_FLAGS.CDH_OVER_SELF">
-      <summary>Indicates that the drop would be over the origin, and thus the position would not change.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.CUSTOM_DROP_HANDLER_FLAGS.CDH_INVALID_DEST">
       <summary>Indicates that the destination is unacceptable for a drop.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.CUSTOM_DROP_HANDLER_FLAGS.CDH_OVER_SELF">
+      <summary>Indicates that the drop would be over the origin, and thus the position would not change.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.DATA_OBJECT_RENDER_HINT">
       <summary>Specifies view or action options for the data object being rendered.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DATA_OBJECT_RENDER_HINT.DORH_CLIPBOARD">
+      <summary>General Paste from the system Clipboard (for example, CTRL+V).</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.DATA_OBJECT_RENDER_HINT.DORH_DEFAULT">
       <summary>No hint information is available.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DATA_OBJECT_RENDER_HINT.DORH_MOVE_IN_SAME_DOC">
-      <summary>Rendering was a Move operation in the same document.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.DATA_OBJECT_RENDER_HINT.DORH_DROP">
       <summary>General Drag and Drop operation. This includes Drag and Drop from the Toolbox as well as DORH_MOVE_IN_SAME_DOC.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DATA_OBJECT_RENDER_HINT.DORH_CLIPBOARD">
-      <summary>General Paste from the system Clipboard (for example, CTRL+V).</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DATA_OBJECT_RENDER_HINT.DORH_TOOLBOX">
-      <summary>User double-clicked an item from the Toolbox.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DATA_OBJECT_RENDER_HINT.DORH_MOVE_IN_SAME_DOC">
+      <summary>Rendering was a Move operation in the same document.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.DATA_OBJECT_RENDER_HINT.DORH_PREVIEW">
       <summary>Tentative preview. For example, using CTRL+SHIFT+V to cycle through the contents of the Clipboard.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DATA_OBJECT_RENDER_HINT.DORH_TOOLBOX">
+      <summary>User double-clicked an item from the Toolbox.</summary>
+    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.DeeperLayerLineIndexToLocalFlags">
       <summary>Specifies how to treat deeper layers.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DeeperLayerLineIndexToLocalFlags.DLI_DEFAULT">
-      <summary>Return <see cref="F:Microsoft.VisualStudio.TextManager.Interop.TextViewErrors.VIEW_E_LOCATION_HIDDEN" /> if deeper text is hidden.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DeeperLayerLineIndexToLocalFlags.DLI_CLOSEST">
-      <summary>Send back the closest available local coordinates</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DeeperLayerLineIndexToLocalFlags.DLI_RIGHTMOST">
-      <summary>Opts for rightmost in case of ambiguity; by default we opt for leftmost in case of ambiguity.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.DeeperLayerLineIndexToLocalFlags.DLI_AVOID_OUTER_EDGE">
       <summary>A "request", not a "requirement" flag. This member is used to tell a layer that during the conversion it should avoid converting the coordinate to a local coordinate that is on the "outer" edge of a visible region ("outer" meaning the right edge if DLI_RIGHTMOST is specified, and meaning the left edge otherwise). try to enclose outer edge</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DeeperLayerLineIndexToLocalFlags.dliDefault">
-      <summary>Same as DLE_DEFAULT.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DeeperLayerLineIndexToLocalFlags.DLI_CLOSEST">
+      <summary>Send back the closest available local coordinates</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DeeperLayerLineIndexToLocalFlags.DLI_DEFAULT">
+      <summary>Return <see cref="F:Microsoft.VisualStudio.TextManager.Interop.TextViewErrors.VIEW_E_LOCATION_HIDDEN" /> if deeper text is hidden.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DeeperLayerLineIndexToLocalFlags.DLI_RIGHTMOST">
+      <summary>Opts for rightmost in case of ambiguity; by default we opt for leftmost in case of ambiguity.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.DeeperLayerLineIndexToLocalFlags.dliClosest">
       <summary>Same as DLE_CLOSEST.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DeeperLayerLineIndexToLocalFlags.dliDefault">
+      <summary>Same as DLE_DEFAULT.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.DeeperLayerLineIndexToLocalFlags.dliRightmost">
       <summary>Same as DLE_RIGHTMOST.</summary>
@@ -766,23 +766,23 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS">
       <summary>Specifies default types that identify items in the core editor view for colorizing.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS.COLITEM_TEXT">
-      <summary>Default value for plain text.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS.COLITEM_KEYWORD">
-      <summary>Denotes a language keyword.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS.COLITEM_COMMENT">
       <summary>Denotes a language comment.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS.COLITEM_IDENTIFIER">
       <summary>Denotes a language identifier. For example, in int MyVariable, MyVariable is an identifier, while int is a keyword.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS.COLITEM_STRING">
-      <summary>Denotes a string.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS.COLITEM_KEYWORD">
+      <summary>Denotes a language keyword.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS.COLITEM_NUMBER">
       <summary>Denotes a number.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS.COLITEM_STRING">
+      <summary>Denotes a string.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS.COLITEM_TEXT">
+      <summary>Default value for plain text.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.DEFAULTITEMS.DEFAULT_ITEM_COUNT">
       <summary>This is the last enumeration value.</summary>
@@ -790,35 +790,41 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.DROPDOWNENTRYTYPE">
       <summary>Specifies the drawing protocol requested for a combo. Used in <see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarClient" /> calls.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DROPDOWNENTRYTYPE.ENTRY_TEXT">
-      <summary>plain text only (<see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarClient.GetEntryText(System.Int32,System.Int32,System.String@)" /> will be called)</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.DROPDOWNENTRYTYPE.ENTRY_ATTR">
-      <summary>Text that may have bold/italic/underline attributes (<see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarClient.GetComboAttributes(System.Int32,System.UInt32@,System.UInt32@,System.IntPtr@)" /> will be called)</summary>
+      <summary>Text that may have bold/italic/underline attributes. <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarClient.GetComboAttributes(System.Int32,System.UInt32@,System.UInt32@,System.IntPtr@)" /> will be called.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.DROPDOWNENTRYTYPE.ENTRY_IMAGE">
-      <summary>A glyph is drawn to the left of the entries (<see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarClient.GetEntryImage(System.Int32,System.Int32,System.Int32@)" /> will be called)</summary>
+      <summary>A glyph is drawn to the left of the entries. <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarClient.GetEntryImage(System.Int32,System.Int32,System.Int32@)" /> will be called.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DROPDOWNENTRYTYPE.ENTRY_TEXT">
+      <summary>Plain text only. <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarClient.GetEntryText(System.Int32,System.Int32,System.String@)" /> will be called.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.DROPDOWNFONTATTR">
       <summary>DROPDOWNFONTATTR is an enum used by IVsDropdownBarClient to describe the appearance of text entries.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DROPDOWNFONTATTR.FONTATTR_PLAIN">
-      <summary>plain text</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.DROPDOWNFONTATTR.FONTATTR_BOLD">
       <summary>bold text</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DROPDOWNFONTATTR.FONTATTR_ITALIC">
-      <summary>italicized text</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DROPDOWNFONTATTR.FONTATTR_UNDERLINE">
-      <summary>underlined text</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.DROPDOWNFONTATTR.FONTATTR_GRAY">
       <summary>grayed out text</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DROPDOWNFONTATTR.FONTATTR_ITALIC">
+      <summary>italicized text</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DROPDOWNFONTATTR.FONTATTR_PLAIN">
+      <summary>plain text</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.DROPDOWNFONTATTR.FONTATTR_UNDERLINE">
+      <summary>underlined text</summary>
+    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.ENUMMARKERFLAGS">
       <summary>Provides options for enumerating collections of markers.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ENUMMARKERFLAGS.EM_ALLTYPES">
+      <summary>Ignore <paramref name="iMarker" /> parameter.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ENUMMARKERFLAGS.EM_CONTAINED">
+      <summary>Excludes any marker whose span is not fully contained within the given span. For example, say that you have a marker from column 0 to column 1 and a marker from column 1 to column 3. Given a span of 0-1, you return only the first marker; given span of 1-2, you return only the second marker. However, given a span of 0-2, you return both markers.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.ENUMMARKERFLAGS.EM_DEFAULT">
       <summary>Default settings.</summary>
@@ -826,8 +832,11 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.ENUMMARKERFLAGS.EM_ENTIREBUFFER">
       <summary>Ignore <paramref name="iPos" /> and <paramref name="iLen" /> parameters.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ENUMMARKERFLAGS.EM_ALLTYPES">
-      <summary>Ignore <paramref name="iMarker" /> parameter.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ENUMMARKERFLAGS.EM_GLYPHINSPAN">
+      <summary>Return markers that have a margin glyph and that start on the same line as the specified span.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ENUMMARKERFLAGS.EM_INCLUDEINVISIBLE">
+      <summary>Includes invisible markers, which are normally excluded.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.ENUMMARKERFLAGS.EM_SORTDESCENDING">
       <summary>Sort in descending order.</summary>
@@ -835,38 +844,29 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.ENUMMARKERFLAGS.EM_SORTPRIORITY">
       <summary>Sort by marker priority.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ENUMMARKERFLAGS.EM_GLYPHINSPAN">
-      <summary>Return markers that have a margin glyph and that start on the same line as the specified span.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ENUMMARKERFLAGS.EM_INCLUDEINVISIBLE">
-      <summary>Includes invisible markers, which are normally excluded.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ENUMMARKERFLAGS.EM_CONTAINED">
-      <summary>Excludes any marker whose span is not fully contained within the given span. For example, say that you have a marker from column 0 to column 1 and a marker from column 1 to column 3. Given a span of 0-1, you return only the first marker; given span of 1-2, you return only the second marker. However, given a span of 0-2, you return both markers.</summary>
-    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.EOLTYPE">
       <summary>Enumerates end of line markers.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.EOLTYPE.eolCRLF">
-      <summary>MS-DOS: \r\n carriage-return/linefeed.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.EOLTYPE.eolCR">
       <summary>Macintosh: \r.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.EOLTYPE.eolCRLF">
+      <summary>MS-DOS: \r\n carriage-return/linefeed.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.EOLTYPE.eolEOF">
+      <summary>End of file.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.EOLTYPE.eolLF">
       <summary>Unix: \n.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.EOLTYPE.eolNONE">
+      <summary>Artificial ending point (e.g. word-wrapped line).</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.EOLTYPE.eolUNI_LINESEP">
       <summary>Unicode line separator.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.EOLTYPE.eolUNI_PARASEP">
       <summary>Unicode paragraph separator.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.EOLTYPE.eolEOF">
-      <summary>End of file.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.EOLTYPE.eolNONE">
-      <summary>Artificial ending point (e.g. word-wrapped line).</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.EOLTYPE.MAX_EOLTYPES">
       <summary>End of enum marker. This value has been redefined in <see cref="T:Microsoft.VisualStudio.TextManager.Interop._EOLTYPE2" />.</summary>
@@ -883,32 +883,32 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.FHR_BY_TYPE">
       <summary>Find region by type. Casts marker type to DWORD and puts in <paramref name="dwCookie" />.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.FHR_INTERSECTS_SPAN">
-      <summary>Finds all regions intersecting the given span.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.FHR_EXACT_SPAN">
-      <summary>Finds only regions whose base span exactly matches the specified span.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.FHR_CLIENT_CONTROLLED_ONLY">
+      <summary>Finds only regions that are controlled by the <paramref name="dwClient" /> member value specified in the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion" /> structure for each hidden region.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.FHR_EDITOR_CONTROLLED_ONLY">
       <summary>Finds only regions that are controlled by the active editor.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.FHR_CLIENT_CONTROLLED_ONLY">
-      <summary>Finds only regions that are controlled by the <paramref name="dwClient" /> member value specified in the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion" /> structure for each hidden region.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.FHR_ENTIRELY_WITHIN_SPAN">
       <summary>Finds regions that are entirely within the given span, not simply intersecting the span.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.FHR_EXACT_SPAN">
+      <summary>Finds only regions whose base span exactly matches the specified span.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.FHR_INNERMOST">
       <summary>Finds one region that is the most deeply nested region.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.FHR_VISIBLE_ONLY">
-      <summary>Excludes regions inside a collapsed region.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.FHR_INTERSECTS_SPAN">
+      <summary>Finds all regions intersecting the given span.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.FHR_MUST_START_IN_SPAN">
+      <summary>Like FHR_PREFER_START_IN_SPAN, except that only regions starting within spans will be returned</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.FHR_PREFER_START_IN_SPAN">
       <summary>Gives a region starting within the span higher priority than one ending in the span. Only has an effect when FHR_INNERMOST is specified.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.FHR_MUST_START_IN_SPAN">
-      <summary>Like FHR_PREFER_START_IN_SPAN, except that only regions starting within spans will be returned</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.FHR_VISIBLE_ONLY">
+      <summary>Excludes regions inside a collapsed region.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.fhrAllRegions">
       <summary>Compatibility member. Use FHR_ALL_REGIONS.</summary>
@@ -919,17 +919,17 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.fhrByType">
       <summary>Compatibility member. Use FHR_BY_TYPE.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.fhrWithinSpan">
-      <summary>Compatibility member. Use FHR_WITHIN_SPAN.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.fhrExactSpan">
-      <summary>Compatibility member. Use FHR_EXACT_SPAN.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.fhrClientControlledOnly">
+      <summary>Compatibility member. Use FHR_CLIENT_CONTROLLED_ONLY.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.fhrEditorControlledOnly">
       <summary>Compatibility member. Use FHR_EDITOR_CONTROLLED_ONLY.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.fhrClientControlledOnly">
-      <summary>Compatibility member. Use FHR_CLIENT_CONTROLLED_ONLY.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.fhrExactSpan">
+      <summary>Compatibility member. Use FHR_EXACT_SPAN.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_HIDDEN_REGION_FLAGS.fhrWithinSpan">
+      <summary>Compatibility member. Use FHR_WITHIN_SPAN.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.FIND_SYNTHETIC_REGION_FLAGS">
       <summary>Specifies how to find a synthetic region.</summary>
@@ -940,20 +940,20 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_SYNTHETIC_REGION_FLAGS.FSR_BY_CLIENT_DATA">
       <summary>dwCookie group. Find region with matching client DWORD</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_SYNTHETIC_REGION_FLAGS.FSR_WITHIN_SPAN">
-      <summary>Span param group (mutually exclusive). Find all regions within the given span.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_SYNTHETIC_REGION_FLAGS.FSR_EXACT_SPAN">
       <summary>find only those regions whose base span exactly matches the given span</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FIND_SYNTHETIC_REGION_FLAGS.FSR_WITHIN_SPAN">
+      <summary>Span param group (mutually exclusive). Find all regions within the given span.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.FINDMARKERFLAGS">
       <summary>Specifies directional options for locating markers.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FINDMARKERFLAGS.FM_FORWARD">
-      <summary>Searches for markers in the forward direction (implicit).</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.FINDMARKERFLAGS.FM_BACKWARD">
       <summary>Searches for markers in the backward direction.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FINDMARKERFLAGS.FM_FORWARD">
+      <summary>Searches for markers in the forward direction (implicit).</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.FONTCOLORPREFERENCES">
       <summary>Specifies color table preferences to be used when painting text or markers.</summary>
@@ -979,11 +979,11 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.FONTFLAGS">
       <summary>Provides additional marker options for modifying the font used to display text appearance.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FONTFLAGS.FF_DEFAULT">
-      <summary>Plain text. Marker does not modify text appearance in terms of bold or strikethrough options.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.FONTFLAGS.FF_BOLD">
       <summary>Bold text.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.FONTFLAGS.FF_DEFAULT">
+      <summary>Plain text. Marker does not modify text appearance in terms of bold or strikethrough options.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.FONTFLAGS.FF_STRIKETHROUGH">
       <summary>Strikethrough text.</summary>
@@ -1006,23 +1006,17 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.GLDE_FLAGS">
       <summary>Provides information about a line in the buffer.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.GLDE_FLAGS.gldeDefault">
-      <summary>Default behavior: whole line, no attributes, regular locking.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.GLDE_FLAGS.gldeSubset">
-      <summary>Returns information only for the line subset defined by the <paramref name="iStartIndex" /> and <paramref name="iEndIndex" /> parameters.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.GLDE_FLAGS.gldeColorizerState">
       <summary>Not implemented.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.GLDE_FLAGS.gldeSyntaxAttr">
-      <summary>Return syntax coloring attributes and the colorizer state.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.GLDE_FLAGS.gldeMarkerAttr">
-      <summary>Returns marker coloring attributes plus other attributes.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.GLDE_FLAGS.gldeDefault">
+      <summary>Default behavior: whole line, no attributes, regular locking.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.GLDE_FLAGS.gldeFullAttr">
       <summary>Combining with a bitwise or of <paramref name="gldeSyntaxAttr" /> and <paramref name="gldeMarkerAttr" />.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.GLDE_FLAGS.gldeMarkerAttr">
+      <summary>Returns marker coloring attributes plus other attributes.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.GLDE_FLAGS.gldeNoReadLock">
       <summary>This value tells <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.GetLineDataEx(System.UInt32,System.Int32,System.Int32,System.Int32,Microsoft.VisualStudio.TextManager.Interop.LINEDATAEX[],Microsoft.VisualStudio.TextManager.Interop.MARKERDATA[])" /> or <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.ReleaseLineDataEx(Microsoft.VisualStudio.TextManager.Interop.LINEDATAEX[])" /> to skip locking entirely. This is only safe to do if you have separately put a read (or read/write) lock on the buffer beforehand, and keep it locked until you've released the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.LINEDATAEX" /> structure again using <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.ReleaseLineDataEx(Microsoft.VisualStudio.TextManager.Interop.LINEDATAEX[])" />. This allows a fast iteration over an entire set of lines, factoring out the locking overhead, which becomes significant if you are iterating over many lines.</summary>
@@ -1030,8 +1024,17 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.GLDE_FLAGS.gldeNoWidgetMargin">
       <summary>Specifies that there is no widget margin, so appropriate markers can color text.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.GLDE_FLAGS.gldeSubset">
+      <summary>Returns information only for the line subset defined by the <paramref name="iStartIndex" /> and <paramref name="iEndIndex" /> parameters.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.GLDE_FLAGS.gldeSyntaxAttr">
+      <summary>Return syntax coloring attributes and the colorizer state.</summary>
+    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.GLYPHDRAWFLAGS">
       <summary>Provides options for drawing the glyph in the widget margin.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.GLYPHDRAWFLAGS.GDF_BOTTOMEDGE">
+      <summary>Bottom line glyph specifying the ending of a multi-line span of text.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.GLYPHDRAWFLAGS.GDF_DEFAULT">
       <summary>Single-line glyph.</summary>
@@ -1041,9 +1044,6 @@
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.GLYPHDRAWFLAGS.GDF_TOPEDGE">
       <summary>Top line glyph specifying the beginning of a multi-line span of text.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.GLYPHDRAWFLAGS.GDF_BOTTOMEDGE">
-      <summary>Bottom line glyph specifying the ending of a multi-line span of text.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_BEHAVIOR">
       <summary>Specifies whether the hidden region is controlled by the client or the editor. </summary>
@@ -1057,17 +1057,8 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_EVENT">
       <summary>Determines the exact user action taken on the hidden text region.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_EVENT.hreRegionDeleted">
-      <summary>Region deleted by a text edit.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_EVENT.hreRegionResurrected">
-      <summary>Region was deleted, but was restored by an Undo or Redo operation.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_EVENT.hreRegionReloaded">
-      <summary>The text of a hidden region was reloaded and may no longer be at an appropriate location.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_EVENT.hreBeforeRegionExpanded">
-      <summary>A region with user-controlled visibility will be expanded.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_EVENT.hreAfterRegionCollapsed">
+      <summary>A region with user-controlled visibility was collapsed.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_EVENT.hreAfterRegionExpanded">
       <summary>A region with user-controlled visibility was expanded.</summary>
@@ -1075,8 +1066,17 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_EVENT.hreBeforeRegionCollapsed">
       <summary>A region with user-controlled visibility will be collapsed.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_EVENT.hreAfterRegionCollapsed">
-      <summary>A region with user-controlled visibility was collapsed.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_EVENT.hreBeforeRegionExpanded">
+      <summary>A region with user-controlled visibility will be expanded.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_EVENT.hreRegionDeleted">
+      <summary>Region deleted by a text edit.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_EVENT.hreRegionReloaded">
+      <summary>The text of a hidden region was reloaded and may no longer be at an appropriate location.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_EVENT.hreRegionResurrected">
+      <summary>Region was deleted, but was restored by an Undo or Redo operation.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_STATE">
       <summary>Specifies whether the span of text is expanded or collapsed.</summary>
@@ -1090,11 +1090,11 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_TYPE">
       <summary>Specifies whether the new region is a hidden (concealed) or outline (collapsible) region.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_TYPE.hrtConcealed">
-      <summary>Specifies a hidden region.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_TYPE.hrtCollapsible">
       <summary>Specifies an outline region.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.HIDDEN_REGION_TYPE.hrtConcealed">
+      <summary>Specifies a hidden region.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.INITVIEW">
       <summary>Specifies view parameters. Used in <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.Initialize(Microsoft.VisualStudio.TextManager.Interop.IVsTextLines,System.IntPtr,System.UInt32,Microsoft.VisualStudio.TextManager.Interop.INITVIEW[])" /> calls.</summary>
@@ -1616,13 +1616,13 @@
       <summary>Manages drop-down bars in code windows.</summary>
     </member>
     <member name="M:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarManager.AddDropdownBar(System.Int32,Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarClient)">
-      <summary>Adds a set of combo drop-downs to a code window.</summary>
+      <summary>Allows you to add a set of combo dropdowns to a code window.  This call wraps the call to IVsDropdownBar::Attach. If there is already a dropdown bar attached to the code window it returns E_UNEXPECTED. In general you should call GetDropdownBar first before calling AddDropdownBar to make sure there isn't already a dropdown bar associated with the given code window.</summary>
       <returns>If the method succeeds, it returns <see cref="F:Microsoft.VisualStudio.VSConstants.S_OK" />. If it fails, it returns an error code.</returns>
       <param name="cCombos">[in] The DropdownBar/Window combo.</param>
       <param name="pClient">[in] DropdownBar client.</param>
     </member>
     <member name="M:Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBarManager.GetDropdownBar(Microsoft.VisualStudio.TextManager.Interop.IVsDropdownBar@)">
-      <summary>Returns the drop-down bar associated with the code window.</summary>
+      <summary>Returns the dropdown bar associated with the code window, if any. If there is one, it returns S_OK and sends back a pointer to it. If there isn't one, it returns null.</summary>
       <returns>If the method succeeds, it returns <see cref="F:Microsoft.VisualStudio.VSConstants.S_OK" />. If it fails, it returns an error code.</returns>
       <param name="ppDropdownBar">[out] Pointer to the drop-down bar, null if there isn't one.</param>
     </member>
@@ -5946,11 +5946,11 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.LAYER_MODULE_CAPABILITIES.LMC_TEXTFIND">
       <summary>Shallow text find operations (for example, ISearch)</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.LAYER_MODULE_CAPABILITIES.LMC_TEXTPRINT">
-      <summary>Printing</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.LAYER_MODULE_CAPABILITIES.LMC_TEXTORIGINATE">
       <summary>Originates text</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.LAYER_MODULE_CAPABILITIES.LMC_TEXTPRINT">
+      <summary>Printing</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.LINEDATA">
       <summary>Used to pass direct-access to line data in a buffer through <see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines" />. This structure returns all of the information for a single line.</summary>
@@ -6009,6 +6009,12 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.LINESTYLE">
       <summary>Specifies default line style options.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.LINESTYLE.LI_DOTTED">
+      <summary>Fifty percent gray dither (dotted when 1 pixel). This value is only valid for <see cref="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_BORDER" /> markers.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.LINESTYLE.LI_HATCH">
+      <summary>Hatched pattern. This value is only valid for <see cref="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_BORDER" /> markers.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.LINESTYLE.LI_NONE">
       <summary>No line.</summary>
     </member>
@@ -6017,12 +6023,6 @@
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.LINESTYLE.LI_SQUIGGLY">
       <summary>Squiggly line. This value is only valid for <see cref="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_LINE" /> markers.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.LINESTYLE.LI_HATCH">
-      <summary>Hatched pattern. This value is only valid for <see cref="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_BORDER" /> markers.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.LINESTYLE.LI_DOTTED">
-      <summary>Fifty percent gray dither (dotted when 1 pixel). This value is only valid for <see cref="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_BORDER" /> markers.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.LinkedTransactionFlags">
       <summary>Specifies whether the linked undo transaction is strict or not.</summary>
@@ -6042,20 +6042,17 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.LTE_TEXTDATAFLAGS">
       <summary>Indicates how a data object is pasted.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.LTE_TEXTDATAFLAGS.LTE_NORMAL">
-      <summary>Normal (stream) mode data.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.LTE_TEXTDATAFLAGS.LTE_BOX">
       <summary>Box (column) mode data. Text is inserted as a box.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.LTE_TEXTDATAFLAGS.LTE_LINE">
       <summary>Line mode data. Text is inserted as whole lines only. This option inserts text in the same manner in which it is selected, if it is selected in line mode.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.LTE_TEXTDATAFLAGS.LTE_NORMAL">
+      <summary>Normal (stream) mode data.</summary>
+    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.MapLocalSpanFlags">
       <summary>Specifies mapping conditions for local spans.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MapLocalSpanFlags.MLS_VISIBLE_ONLY">
-      <summary>Omit concealed and collapsed text.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MapLocalSpanFlags.MLS_INCLUDE_USER_EXPANDABLE">
       <summary>Omit concealed text but include collapsed text (collapsible text that is in the collapsed state).</summary>
@@ -6063,8 +6060,8 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MapLocalSpanFlags.MLS_NEVER_COMBINE_SPANS">
       <summary>Keep adjacent spans from being combined into a single underlying span.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MapLocalSpanFlags.mlsVisibleOnly">
-      <summary>Replaced by MSL_VISIBLE_ONLY.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MapLocalSpanFlags.MLS_VISIBLE_ONLY">
+      <summary>Omit concealed and collapsed text.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MapLocalSpanFlags.mlsIncludeUserExpandable">
       <summary>Replaced by MSL_INCLUDE_USER_EXPANDABLE.</summary>
@@ -6072,23 +6069,26 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MapLocalSpanFlags.mlsNeverCombineSpans">
       <summary>Replaced by MSL_NEVER_COMBINE_SPANS.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MapLocalSpanFlags.mlsVisibleOnly">
+      <summary>Replaced by MSL_VISIBLE_ONLY.</summary>
+    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.MARKERBEHAVIORFLAGS">
       <summary>Provides flags that specify marker behavior.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERBEHAVIORFLAGS.MB_DEFAULT">
       <summary>Default stream behavior.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERBEHAVIORFLAGS.MB_LINESPAN">
-      <summary>Marker always adjusts itself to span only one line at a time.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERBEHAVIORFLAGS.MB_LEFTEDGE_LEFTTRACK">
       <summary>If edits occur on the left edge of the marker, then the marker tracks to the left.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERBEHAVIORFLAGS.MB_RIGHTEDGE_RIGHTTRACK">
-      <summary>If edits occur on the right edge of the marker, then the marker tracks to the right.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERBEHAVIORFLAGS.MB_LINESPAN">
+      <summary>Marker always adjusts itself to span only one line at a time.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERBEHAVIORFLAGS.MB_MULTILINESPAN">
       <summary>Marker can span multiple lines.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERBEHAVIORFLAGS.MB_RIGHTEDGE_RIGHTTRACK">
+      <summary>If edits occur on the right edge of the marker, then the marker tracks to the right.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERBEHAVIORFLAGS.MB_TRACK_EDIT_ON_RELOAD">
       <summary>Forces the marker to track every edit as a replace, ignoring any reload semantics. Do not use this value unless you have markers that need to guarantee that they are tracking in response to <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsTextLinesEvents.OnChangeLineText(Microsoft.VisualStudio.TextManager.Interop.TextLineChange[],System.Int32)" />.</summary>
@@ -6096,20 +6096,20 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.MarkerCommandValues">
       <summary>Specifies the integer identifying the item number for a marker type's context menu command.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MarkerCommandValues.mcvBodyDoubleClickCommand">
+      <summary>Fired for a double click on the body text.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MarkerCommandValues.mcvFirstContextMenuCommand">
       <summary>First command associated with the marker type. The list of commands associated with each marker type varies with the marker type.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MarkerCommandValues.mcvLastContextMenuCommand">
-      <summary>Last command associated with the marker type. The list of commands associated with each marker type varies with the marker type.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MarkerCommandValues.mcvGlyphDoubleClickCommand">
+      <summary>Fired for a double click on the glyph (if one exists).</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MarkerCommandValues.mcvGlyphSingleClickCommand">
       <summary>Fired for a single click on the glyph (if one exists).</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MarkerCommandValues.mcvBodyDoubleClickCommand">
-      <summary>Fired for a double click on the body text.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MarkerCommandValues.mcvGlyphDoubleClickCommand">
-      <summary>Fired for a double click on the glyph (if one exists).</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MarkerCommandValues.mcvLastContextMenuCommand">
+      <summary>Last command associated with the marker type. The list of commands associated with each marker type varies with the marker type.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.MARKERDATA">
       <summary>Specifies directional options for locating markers.</summary>
@@ -6138,26 +6138,32 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE">
       <summary>Sets the characteristics of a text marker.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_INVISIBLE">
-      <summary>Invisible marker. Priority Level: 100</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_READONLY">
-      <summary>Read-only. Priority Level: 0 (lower priority for performance reasons)</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_SHORTCUT">
-      <summary>Task list shortcut. Priority Level: 199</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.DEF_MARKER_COUNT">
+      <summary>Marker count. This should be at the end to define the number of markers.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_BOOKMARK">
       <summary>Generic bookmark (or tag). Priority Level: 200</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_COMPILE_ERROR">
-      <summary>Compile error. Priority Level: 600</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_CODESENSE_ERROR">
       <summary>CodeSense error. Priority Level: 700</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_COMPILE_ERROR">
+      <summary>Compile error. Priority Level: 600</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_IDENTERROR">
+      <summary>Obsolete. Use MARKER_COMPILE_ERROR.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_INVISIBLE">
+      <summary>Invisible marker. Priority Level: 100</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_LIST_LOCATION">
+      <summary>Current location from result list.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_OTHER_ERROR">
       <summary>Third party tool error. Priority level: 750.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_READONLY">
+      <summary>Read-only. Priority Level: 0 (lower priority for performance reasons)</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_REGION_COLLAPSED">
       <summary>Collapsible region is collapsed. Priority Level: 801</summary>
@@ -6165,14 +6171,8 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_REGION_EXPANDED">
       <summary>Collapsible region is expanded 800.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_LIST_LOCATION">
-      <summary>Current location from result list.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.DEF_MARKER_COUNT">
-      <summary>Marker count. This should be at the end to define the number of markers.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_IDENTERROR">
-      <summary>Obsolete. Use MARKER_COMPILE_ERROR.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_SHORTCUT">
+      <summary>Task list shortcut. Priority Level: 199</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERTYPE.MARKER_SYNTAXERROR">
       <summary>Obsolete. Use MARKER_COMPILE_ERROR.</summary>
@@ -6180,8 +6180,8 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL">
       <summary>Determines the visual style of the marker.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_GLYPH">
-      <summary>Can show a glyph in the widget margin. This indicates that you want to draw a margin glyph. Draw the glyph using <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsPackageDefinedTextMarkerType.DrawGlyphWithColors(System.IntPtr,Microsoft.VisualStudio.OLE.Interop.RECT[],System.Int32,Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerColorSet,System.UInt32,System.Int32)" />. If the widget margin does not exist, depending on the window and on the user's preferences, then the glyph is not visible.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_BORDER">
+      <summary>Indicates that a box is drawn around the marked text. The border is not necessarily a square in the case of a multi-line marker. You can specify either a solid or dashed line. For more information, refer to the <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsPackageDefinedTextMarkerType.GetDefaultLineStyle(Microsoft.VisualStudio.TextManager.Interop.COLORINDEX[],Microsoft.VisualStudio.TextManager.Interop.LINESTYLE[])" /> method.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_COLOR_ALWAYS">
       <summary>Indicates that the marked text should always be colored inline. This option is exclusive of the MV_COLOR_LINE_IF_NO_MARGIN option.</summary>
@@ -6189,8 +6189,32 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_COLOR_LINE_IF_NO_MARGIN">
       <summary>Indicates that the marked text should be colored only if the widget margin is hidden. This option is exclusive of the MV_COLOR_ALWAYS option.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_COLOR_SPAN_IF_ZERO_LENGTH">
+      <summary>Indicates that a marker should paint as a solid bar if the text span is of zero length. This setting should not be used for markers such as wavy lines, because the line will appear only as a solid bar.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_CONTEXT_CONTRIBUTION_FOR_BODY">
+      <summary>Indicates that the body of a marker wants to contribute context, and thus its client can be queried for <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsUserContextUpdate" />.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_DRAGGABLE_GLYPH">
+      <summary>Indicates that a glyph can take part in drag and drop operations. In addition to MV_DRAGGABLE_GLYPH, a marker that allows dragging should also specify MV_GLYPH_HOVER_CURSOR, so that the editor knows to provide a custom cursor for the mouse when it passes over the glyph. These visual styles can either be set for the marker type (if all markers of the given type have the same behavior) or for a given marker instance. The text view negotiates the hover cursor and drag initiation by calling QueryInterface on the marker client provided (<see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient" />). The client object should implement <see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsMouseCursorProvider" /> to handle mouse cursor updates for MV_GLYPH_HOVER_CURSOR and <see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerGlyphDropHandler" /> to handle drop negotiation.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_FORCE_INVISIBLE">
+      <summary>Forces the marker to be invisible. Use this setting to toggle a marker between being visible and invisible, which is faster than using <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarker.SetType(System.Int32)" />.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_GLYPH">
+      <summary>Can show a glyph in the widget margin. This indicates that you want to draw a margin glyph. Draw the glyph using <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsPackageDefinedTextMarkerType.DrawGlyphWithColors(System.IntPtr,Microsoft.VisualStudio.OLE.Interop.RECT[],System.Int32,Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerColorSet,System.UInt32,System.Int32)" />. If the widget margin does not exist, depending on the window and on the user's preferences, then the glyph is not visible.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_GLYPH_HOVER_CURSOR">
+      <summary>Indicates that the client has requested a callback (via their client interface) to set the mouse cursor when the user hovers the mouse over the glyph.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_LINE">
       <summary>Marker is only a line adornment and does not otherwise affect coloring. Thus, the marker is some form of underline style. Currently, the only supported form of this is a wavy line.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_MULTILINE_GLYPH">
+      <summary>Indicates that a glyph spans multiple lines. This enables the drawing of multi-line glyphs. If you specify this flag, your I<see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsPackageDefinedTextMarkerType.DrawGlyphWithColors(System.IntPtr,Microsoft.VisualStudio.OLE.Interop.RECT[],System.Int32,Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerColorSet,System.UInt32,System.Int32)" /> handler is called with the <see cref="F:Microsoft.VisualStudio.TextManager.Interop.GLYPHDRAWFLAGS.GDF_MULTILINE" /> flag, and often with <see cref="F:Microsoft.VisualStudio.TextManager.Interop.GLYPHDRAWFLAGS.GDF_BOTTOMEDGE" />, depending on the scenario.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_SEL_MARGIN_GLYPH">
+      <summary>Similar to MV_GLYPH, but indicates that the glyph lives in the selection margin, not the normal widget margin.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_TIP_FOR_BODY">
       <summary>Determines whether a tip should be shown for the body of the marker text. The MV_TIP_FOR_BODY and MV_TIP_FOR_GLYPH options are dependant on one another. If this value is set, marked text will trigger a tool tip over the body or glyph. However, as the marker type provider, you are not allowed to specify what text shows up. This is handled by the <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient.GetTipText(Microsoft.VisualStudio.TextManager.Interop.IVsTextMarker,System.String[])" />handler of whoever created the given marker instance.</summary>
@@ -6198,47 +6222,8 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_TIP_FOR_GLYPH">
       <summary>Determines whether a tip should be shown in the widget margin.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_SEL_MARGIN_GLYPH">
-      <summary>Similar to MV_GLYPH, but indicates that the glyph lives in the selection margin, not the normal widget margin.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_FORCE_INVISIBLE">
-      <summary>Forces the marker to be invisible. Use this setting to toggle a marker between being visible and invisible, which is faster than using <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarker.SetType(System.Int32)" />.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_BORDER">
-      <summary>Indicates that a box is drawn around the marked text. The border is not necessarily a square in the case of a multi-line marker. You can specify either a solid or dashed line. For more information, refer to the <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsPackageDefinedTextMarkerType.GetDefaultLineStyle(Microsoft.VisualStudio.TextManager.Interop.COLORINDEX[],Microsoft.VisualStudio.TextManager.Interop.LINESTYLE[])" /> method.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_GLYPH_HOVER_CURSOR">
-      <summary>Indicates that the client has requested a callback (via their client interface) to set the mouse cursor when the user hovers the mouse over the glyph.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_DRAGGABLE_GLYPH">
-      <summary>Indicates that a glyph can take part in drag and drop operations. In addition to MV_DRAGGABLE_GLYPH, a marker that allows dragging should also specify MV_GLYPH_HOVER_CURSOR, so that the editor knows to provide a custom cursor for the mouse when it passes over the glyph. These visual styles can either be set for the marker type (if all markers of the given type have the same behavior) or for a given marker instance. The text view negotiates the hover cursor and drag initiation by calling QueryInterface on the marker client provided (<see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerClient" />). The client object should implement <see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsMouseCursorProvider" /> to handle mouse cursor updates for MV_GLYPH_HOVER_CURSOR and <see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerGlyphDropHandler" /> to handle drop negotiation.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_MULTILINE_GLYPH">
-      <summary>Indicates that a glyph spans multiple lines. This enables the drawing of multi-line glyphs. If you specify this flag, your I<see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsPackageDefinedTextMarkerType.DrawGlyphWithColors(System.IntPtr,Microsoft.VisualStudio.OLE.Interop.RECT[],System.Int32,Microsoft.VisualStudio.TextManager.Interop.IVsTextMarkerColorSet,System.UInt32,System.Int32)" /> handler is called with the <see cref="F:Microsoft.VisualStudio.TextManager.Interop.GLYPHDRAWFLAGS.GDF_MULTILINE" /> flag, and often with <see cref="F:Microsoft.VisualStudio.TextManager.Interop.GLYPHDRAWFLAGS.GDF_BOTTOMEDGE" />, depending on the scenario.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_CONTEXT_CONTRIBUTION_FOR_BODY">
-      <summary>Indicates that the body of a marker wants to contribute context, and thus its client can be queried for <see cref="T:Microsoft.VisualStudio.Shell.Interop.IVsUserContextUpdate" />.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MARKERVISUAL.MV_COLOR_SPAN_IF_ZERO_LENGTH">
-      <summary>Indicates that a marker should paint as a solid bar if the text span is of zero length. This setting should not be used for markers such as wavy lines, because the line will appear only as a solid bar.</summary>
-    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.MethodTextType">
       <summary>Identifies different portions of the method tip to provide information on.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MethodTextType.MTT_TYPEPREFIX">
-      <summary>Return type that is provided before the variable name in code. For example, the "Long" type in Visual C++, which is written as "Long MyVariable" in code.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MethodTextType.MTT_TYPEPOSTFIX">
-      <summary>Return type that is provided after the variable name in code. For example, the "Long" type in Visual Basic, which is written as "MyVariable AsLong" in code.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MethodTextType.MTT_NAME">
-      <summary>Method name.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MethodTextType.MTT_DESCRIPTION">
-      <summary>Description of method, which is provided its own line.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MethodTextType.MTT_OPENBRACKET">
-      <summary>Open bracket delimiter. Default value is a left parenthesis. To show nothing in the bracket location, return an empty string in <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetMethodText(System.Int32,Microsoft.VisualStudio.TextManager.Interop.MethodTextType)" />.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MethodTextType.MTT_CLOSEBRACKET">
       <summary>Closed bracket delimiter. Default value is a right parenthesis. To show nothing in the bracket location, return an empty string in <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetMethodText(System.Int32,Microsoft.VisualStudio.TextManager.Interop.MethodTextType)" />.</summary>
@@ -6246,20 +6231,35 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MethodTextType.MTT_DELIMITER">
       <summary>Parameter delimiter. default is ", ". You must specify the space if you want it included in your delimiter string.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MethodTextType.MTT_DESCRIPTION">
+      <summary>Description of method, which is provided its own line.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MethodTextType.MTT_NAME">
+      <summary>Method name.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MethodTextType.MTT_OPENBRACKET">
+      <summary>Open bracket delimiter. Default value is a left parenthesis. To show nothing in the bracket location, return an empty string in <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData.GetMethodText(System.Int32,Microsoft.VisualStudio.TextManager.Interop.MethodTextType)" />.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MethodTextType.MTT_TYPEPOSTFIX">
+      <summary>Return type that is provided after the variable name in code. For example, the "Long" type in Visual Basic, which is written as "MyVariable AsLong" in code.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MethodTextType.MTT_TYPEPREFIX">
+      <summary>Return type that is provided before the variable name in code. For example, the "Long" type in Visual C++, which is written as "Long MyVariable" in code.</summary>
+    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.MOVESELECTION_ABS_TYPE">
       <summary>Indicates moving a record selection by an absolute amount.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MOVESELECTION_ABS_TYPE.MOVESELECTION_ABS_FIRSTCOLUMN">
       <summary>Move record selection to first column.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MOVESELECTION_ABS_TYPE.MOVESELECTION_ABS_FIRSTLINE">
+      <summary>Move record selection to first line.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MOVESELECTION_ABS_TYPE.MOVESELECTION_ABS_FIRSTTEXTCOLUMN">
       <summary>Move record selection to first text column.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MOVESELECTION_ABS_TYPE.MOVESELECTION_ABS_LASTCOLUMN">
       <summary>Move record selection to last column.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MOVESELECTION_ABS_TYPE.MOVESELECTION_ABS_FIRSTLINE">
-      <summary>Move record selection to first line.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MOVESELECTION_ABS_TYPE.MOVESELECTION_ABS_LASTLINE">
       <summary>Move record selection to last line.</summary>
@@ -6270,14 +6270,14 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MOVESELECTION_REL_TYPE.MOVESELECTION_REL_CHARACTER">
       <summary>Move selection one character.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MOVESELECTION_REL_TYPE.MOVESELECTION_REL_WORD">
-      <summary>Move selection one word.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MOVESELECTION_REL_TYPE.MOVESELECTION_REL_LINE">
       <summary>Move selection one line.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.MOVESELECTION_REL_TYPE.MOVESELECTION_REL_PAGE">
       <summary>Move selection one page.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.MOVESELECTION_REL_TYPE.MOVESELECTION_REL_WORD">
+      <summary>Move selection one word.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.NewHiddenRegion">
       <summary>Creates a new outline or hidden text region over the specified text span.</summary>
@@ -6336,54 +6336,42 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.PAINTINGRESTRICTIONS">
       <summary>Defines painting restrictions.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PAINTINGRESTRICTIONS.PR_NONE">
-      <summary>No restrictions.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.PAINTINGRESTRICTIONS.PR_NO_MARGIN">
       <summary>No widget margin available.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PAINTINGRESTRICTIONS.PR_NONE">
+      <summary>No restrictions.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.PANEEVENTS">
       <summary>Specifies events for split window panes.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEEVENTS.PE_GOTFOCUS">
-      <summary>Pane received focus.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEEVENTS.PE_CLOSED">
       <summary>Pane is closed.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEEVENTS.PE_DETACHED">
+      <summary>Pane is detached.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEEVENTS.PE_FLAGSCHANGED">
       <summary>
         <see cref="T:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS" /> has changed.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEEVENTS.PE_DETACHED">
-      <summary>Pane is detached.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEEVENTS.PE_FOCUS_TO_EDIT_PANE">
       <summary>Sets focus on an edit pane.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEEVENTS.PE_GOTFOCUS">
+      <summary>Pane received focus.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS">
       <summary>Indicates appearance of split window panes.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS.PF_SUNKEN">
-      <summary>Default border style, pane appears sunken.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS.PF_RAISED">
-      <summary>Pane appears raised.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS.PF_ETCHED">
-      <summary>Pane appears etched.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS.PF_BUMP">
-      <summary>Pane appears raised and etched.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS.PF_SHALLOW">
-      <summary>Pane appears shallow etched.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS.PF_BORDER">
+      <summary>Border types are ignored unless this is set.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS.PF_BORDERMASK">
       <summary>Sets all border bits, raised, etched, and shallow.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS.PF_BORDER">
-      <summary>Border types are ignored unless this is set.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS.PF_BUMP">
+      <summary>Pane appears raised and etched.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS.PF_ELASTICX">
       <summary>Pane "prefers" elasticity when sized horizontally.</summary>
@@ -6391,8 +6379,20 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS.PF_ELASTICY">
       <summary>Pane "prefers" elasticity when sized vertically.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS.PF_ETCHED">
+      <summary>Pane appears etched.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS.PF_NOFOCUS">
       <summary>If a pane specifies PF_NOFOCUS it can still get the focus via the mouse, but it will not participate in F6-style pane hopping.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS.PF_RAISED">
+      <summary>Pane appears raised.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS.PF_SHALLOW">
+      <summary>Pane appears shallow etched.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.PANEFLAGS.PF_SUNKEN">
+      <summary>Default border style, pane appears sunken.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.PANETYPE">
       <summary>Specifies the pane to get with <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsSplitRoot.GetPane(Microsoft.VisualStudio.TextManager.Interop.PANETYPE,Microsoft.VisualStudio.TextManager.Interop.IVsSplitPane@)" /> calls.</summary>
@@ -6412,23 +6412,26 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.ParameterTextType.PTT_DECLARATION">
       <summary>Full declaration as it appears in signature (that is, "Long MyVariable" or "MyVariable As Long").</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ParameterTextType.PTT_NAME">
-      <summary>Parameter name only (that is, "MyVariable").</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.ParameterTextType.PTT_DESCRIPTION">
       <summary>Description (gets its own line, and is prefixed with NAME: (bolded)).</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.ParameterTextType.PTT_NAME">
+      <summary>Parameter name only (that is, "MyVariable").</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS">
       <summary>Regular expression evaluation errors.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_EMPTYSET">
+      <summary>[]; Empty set.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_ESCAPEMISSINGARG">
+      <summary>\ or \x or \u; Missing valid argument.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_GROUPMISSINGCLOSE">
+      <summary>(); Missing ).</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_INTERNALERROR">
       <summary>Internal error.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_SYNTAXERROR">
-      <summary>Syntax error in expression.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_STACKOVERFLOW">
-      <summary>Evaluation stack overflow.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_MISSINGARG">
       <summary>Missing argument in syntax.</summary>
@@ -6436,32 +6439,29 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_POWERARGOUTOFRANGE">
       <summary>^n; Power closure argument out of range.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_ESCAPEMISSINGARG">
-      <summary>\ or \x or \u; Missing valid argument.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_SPECIALUNKNOWN">
-      <summary>:x; Unknown x.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_TAGOUTOFRANGE">
-      <summary>\n; n out of range.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_REPLACETEXT">
+      <summary>Unable to create replacement text.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_SETMISSINGCLOSE">
       <summary>[]; Missing ].</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_SPECIALUNKNOWN">
+      <summary>:x; Unknown x.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_STACKOVERFLOW">
+      <summary>Evaluation stack overflow.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_SYNTAXERROR">
+      <summary>Syntax error in expression.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_TAGMISSINGCLOSE">
       <summary>{}; Tag missing }.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_TAGOUTOFRANGE">
+      <summary>\n; n out of range.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_TOOMANYTAGS">
       <summary>{}; Too many tagged expressions.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_EMPTYSET">
-      <summary>[]; Empty set.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_GROUPMISSINGCLOSE">
-      <summary>(); Missing ).</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RE_ERRORS.RE_E_REPLACETEXT">
-      <summary>Unable to create replacement text.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.READONLYSTATUS">
       <summary>Sets the read and write status of a text buffer.</summary>
@@ -6478,38 +6478,38 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags">
       <summary>Specifies the state of a selection relative to another layer.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.RSS_DEFAULT">
-      <summary>Coordinates relative to the top view layer.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.RSS_TOP_LAYER">
-      <summary>Coordinates relative to the top view layer.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.RSS_BUFFER">
       <summary>Coordinates relative to the buffer.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.RSS_DEFAULT">
+      <summary>Coordinates relative to the top view layer.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.RSS_RELATIVE_LAYER">
       <summary>Coordinates relative to the layer specified in <paramref name="pReference" />.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.RSS_TRACKSEL">
-      <summary>Coordinates relative to tracking selection.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.RSS_SET_TO_NEAREST_LOCAL">
+      <summary>For RSS_BUFFER or RSS_RELATIVE_LAYER, tells the view to put the caret at the nearest local position.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.RSS_SET_WITHOUT_SCROLLING">
       <summary>Flags for <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsLayeredTextView.SetRelativeSelectionState(System.UInt32,Microsoft.VisualStudio.TextManager.Interop.IVsTextLayer,Microsoft.VisualStudio.TextManager.Interop.SELECTIONSTATE[])" /> tells the view to not scroll to force the selection to be visible.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.RSS_SET_TO_NEAREST_LOCAL">
-      <summary>For RSS_BUFFER or RSS_RELATIVE_LAYER, tells the view to put the caret at the nearest local position.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.RSS_TOP_LAYER">
+      <summary>Coordinates relative to the top view layer.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.rssDefault">
-      <summary>Same as RSS_DEFAULT. For compatibility.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.rssTopLayer">
-      <summary>Same as RSS_TOP_LAYER. For compatibility.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.RSS_TRACKSEL">
+      <summary>Coordinates relative to tracking selection.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.rssBuffer">
       <summary>Same as RSS_BUFFER. For compatibility.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.rssDefault">
+      <summary>Same as RSS_DEFAULT. For compatibility.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.rssRelativeLayer">
       <summary>Same as RSS_RELATIVE_LAYER. For compatibility.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.rssTopLayer">
+      <summary>Same as RSS_TOP_LAYER. For compatibility.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.RelativeSelectionStateFlags.rssTrackSel">
       <summary>Same as RSS_TRACKSEL. For compatibility.</summary>
@@ -6517,26 +6517,26 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.REPLACE_TEXT_FLAGS">
       <summary>Specifies options for modifying text during a replace operation.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.REPLACE_TEXT_FLAGS.rtfClientSuppressFormatting">
+      <summary>Stop <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsTextReplaceEvents.OnReplace(Microsoft.VisualStudio.TextManager.Interop.ChangeInput[])" /> listeners from formatting code.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.REPLACE_TEXT_FLAGS.rtfDefault">
       <summary>New line normalization.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.REPLACE_TEXT_FLAGS.rtfKeepMarkers">
-      <summary>Retain existing markers.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.REPLACE_TEXT_FLAGS.rtfDoNotNormalizeNewlines">
       <summary>Do not normalize new lines.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.REPLACE_TEXT_FLAGS.rtfInterimText">
+      <summary>This flag communicates to <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.ReplaceLinesEx(System.UInt32,System.Int32,System.Int32,System.Int32,System.Int32,System.IntPtr,System.Int32,Microsoft.VisualStudio.TextManager.Interop.TextSpan[])" /> that the inserted text is interim text from the Input Method Editor (IME). This affects undo item merging. Subsequent text overwrites the interim text and the undo items need to be merged in a way that reflects this.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.REPLACE_TEXT_FLAGS.rtfKeepMarkers">
+      <summary>Retain existing markers.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.REPLACE_TEXT_FLAGS.rtfNormalizeTabsAndSpaces">
       <summary>(Not yet supported) Normalize tabs and spaces.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.REPLACE_TEXT_FLAGS.rtfSyntacticReformat">
       <summary>(Not yet supported) Reformat syntax.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.REPLACE_TEXT_FLAGS.rtfClientSuppressFormatting">
-      <summary>Stop <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsTextReplaceEvents.OnReplace(Microsoft.VisualStudio.TextManager.Interop.ChangeInput[])" /> listeners from formatting code.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.REPLACE_TEXT_FLAGS.rtfInterimText">
-      <summary>This flag communicates to <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsTextLines.ReplaceLinesEx(System.UInt32,System.Int32,System.Int32,System.Int32,System.Int32,System.IntPtr,System.Int32,Microsoft.VisualStudio.TextManager.Interop.TextSpan[])" /> that the inserted text is interim text from the Input Method Editor (IME). This affects undo item merging. Subsequent text overwrites the interim text and the undo items need to be merged in a way that reflects this.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.RESOLVENAMEFLAGS">
       <summary>Provides flags for <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageDebugInfo.ResolveName(System.String,System.UInt32,Microsoft.VisualStudio.TextManager.Interop.IVsEnumDebugName@)" />.</summary>
@@ -6568,26 +6568,14 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.SELECTIONSTATEFLAGS">
       <summary>Represents the state of a selection so that it can be restored to that state.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.SELECTIONSTATEFLAGS.ssfDefault">
-      <summary> Default selection state.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.SELECTIONSTATEFLAGS.ssfColumn">
       <summary> This is a column selection state.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.SELECTIONSTATEFLAGS.ssfDefault">
+      <summary> Default selection state.</summary>
+    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.SPLITFLAGS">
       <summary>Specifies how a window pane is to be split.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITFLAGS.SF_HORIZONTAL">
-      <summary>Split is horizontal. (default)</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITFLAGS.SF_VERTICAL">
-      <summary>Split is vertical.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITFLAGS.SF_MAKESECONDARY">
-      <summary>Split pane is the secondary pane. (default)</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITFLAGS.SF_MAKEPRIMARY">
-      <summary>Split pane is the primary pane.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITFLAGS.SF_ADJUSTABLE">
       <summary>Split pane is adjustable. (default)</summary>
@@ -6595,20 +6583,32 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITFLAGS.SF_FIXED">
       <summary>Split pane is fixed.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITFLAGS.SF_HORIZONTAL">
+      <summary>Split is horizontal. (default)</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITFLAGS.SF_MAKEPRIMARY">
+      <summary>Split pane is the primary pane.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITFLAGS.SF_MAKESECONDARY">
+      <summary>Split pane is the secondary pane. (default)</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITFLAGS.SF_VERTICAL">
+      <summary>Split is vertical.</summary>
+    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.SPLITNOTIFYCODE">
       <summary>Represents different changes to the splitter. </summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITNOTIFYCODE.SNC_ANCESTORATTACHED">
+      <summary>The split pane is attached to its parent.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITNOTIFYCODE.SNC_ANCESTORDETACHED">
+      <summary>The splitter is detached from its parent.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITNOTIFYCODE.SNC_BEGINSIZE">
       <summary>The initial size of the split pane.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITNOTIFYCODE.SNC_ENDSIZE">
       <summary>The final size of the split pane.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITNOTIFYCODE.SNC_ANCESTORDETACHED">
-      <summary>The splitter is detached from its parent.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITNOTIFYCODE.SNC_ANCESTORATTACHED">
-      <summary>The split pane is attached to its parent.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.SPLITNOTIFYCODE.SNC_LBUTTONDBLCLK">
       <summary>The split pane was double-clicked</summary>
@@ -6676,38 +6676,38 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.TextBufferErrors">
       <summary>General definitions for text buffer errors.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextBufferErrors.BUFFER_E_DEST_TOO_SMALL">
+      <summary>The memory block passed in was too small.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextBufferErrors.BUFFER_E_LOCKED">
+      <summary>The buffer was locked for writing.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextBufferErrors.BUFFER_E_READONLY">
       <summary>The buffer has been marked as read-only.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextBufferErrors.BUFFER_E_READONLY_REGION">
       <summary>A region has been marked as read-only.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextBufferErrors.BUFFER_E_TIMEOUT">
-      <summary>Timed out waiting for access.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextBufferErrors.BUFFER_E_LOCKED">
-      <summary>The buffer was locked for writing.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextBufferErrors.BUFFER_E_SCC_READONLY">
       <summary>The file backing the buffer is under source code control and checked in.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextBufferErrors.BUFFER_E_DEST_TOO_SMALL">
-      <summary>The memory block passed in was too small.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextBufferErrors.MARKER_E_INVALIDATED">
-      <summary>You are trying to manipulate an invalid marker.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextBufferErrors.BUFFER_E_TIMEOUT">
+      <summary>Timed out waiting for access.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextBufferErrors.MARKER_E_BUFFERDESTROYED">
       <summary>You are trying to manipulate a marker whose buffer has been destroyed.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextBufferErrors.MARKER_E_INVALIDATED">
+      <summary>You are trying to manipulate an invalid marker.</summary>
+    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.TextBufferInitFlags">
       <summary>Specifies text buffer initialization flags.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextBufferInitFlags.BIF_DEFAULT">
-      <summary>Default initialization.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextBufferInitFlags.BIF_CUSTOMSTORAGE">
       <summary>Initialize for custom storage.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextBufferInitFlags.BIF_DEFAULT">
+      <summary>Default initialization.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextBufferInitFlags.BIF_INITTEXT">
       <summary>Initialize for text buffer.</summary>
@@ -6718,23 +6718,23 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextFindMode.TFIND_BACKWARDS">
       <summary>Search backwards.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextFindMode.TFIND_IN_SELECTION">
+      <summary>Search within the current selection.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextFindMode.TFIND_MATCH_CASE">
       <summary>Match text case.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextFindMode.TFIND_WHOLE_WORD">
-      <summary>Search only for the whole word.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextFindMode.TFIND_NEW_SEARCH">
+      <summary>Start a new search.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextFindMode.TFIND_REG_EXPR">
       <summary>Search involves a regular expression.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextFindMode.TFIND_WHOLE_WORD">
+      <summary>Search only for the whole word.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextFindMode.TFIND_WRAP_SEARCH">
       <summary>Search even if target text wraps.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextFindMode.TFIND_IN_SELECTION">
-      <summary>Search within the current selection.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextFindMode.TFIND_NEW_SEARCH">
-      <summary>Start a new search.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.TextLineChange">
       <summary>Provides settings for tracking changes to any text line in the buffer.</summary>
@@ -6760,11 +6760,11 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.TextSelMode">
       <summary>Determines whether stream or box selection mode is being used.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextSelMode.SM_STREAM">
-      <summary>Specifies a stream selection. To create a stream selection in the core text editor, simply select text with your mouse.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextSelMode.SM_BOX">
       <summary>Specifies a box selection. To create a box selection in the core text editor, press the ALT key while you select text with your mouse.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextSelMode.SM_STREAM">
+      <summary>Specifies a stream selection. To create a stream selection in the core text editor, simply select text with your mouse.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.TextSpan">
       <summary>Defines a span of text based on character and line index.</summary>
@@ -6784,14 +6784,17 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.TextViewAction">
       <summary>Specifies text positioning within a view.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewAction.TVA_SETCARETPOS">
-      <summary>Caret (insertion point) management.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewAction.TVA_CENTERLINES">
       <summary>Place the specified lines of text in the center of the view.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewAction.TVA_SETCARETPOS">
+      <summary>Caret (insertion point) management.</summary>
+    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.TextViewErrors">
       <summary>General definitions for text view errors.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewErrors.VIEW_E_LOCATION_HIDDEN">
+      <summary>The location you referenced (moving selection to, scrolling into view, etc.) is not presently visible in this view.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewErrors.VIEW_E_NO_BOOKMARKS">
       <summary>There are no bookmarks to navigate to or delete.</summary>
@@ -6802,9 +6805,6 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewErrors.VIEW_E_USERREADONLY">
       <summary>This file cannot be modified in the editor.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewErrors.VIEW_E_LOCATION_HIDDEN">
-      <summary>The location you referenced (moving selection to, scrolling into view, etc.) is not presently visible in this view.</summary>
-    </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags">
       <summary>Specifies view options.</summary>
     </member>
@@ -6814,38 +6814,38 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_HSCROLL">
       <summary>Indicates that the view should have a horizontal scrollbar. This value is equivalent to WS_HSCROLL from the Platform SDK. Note that this setting is different from the MDI child scrollbars used by the text editor.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_VSCROLL">
-      <summary>Indicates that the view should have a vertical scrollbar. This value is equivalent to WS_VSCROLL from the Platform SDK.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_UPDATE_STATUS_BAR">
-      <summary>Tells the view to update the status bar.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_SET_WIDGET_MARGIN">
-      <summary>If you wish to force a certain setting upon a view, regardless of the user's editor preference settings, use these flags along with a <see cref="T:Microsoft.VisualStudio.TextManager.Interop.VIEWPREFERENCES" /> pointer into <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.Initialize(Microsoft.VisualStudio.TextManager.Interop.IVsTextLines,System.IntPtr,System.UInt32,Microsoft.VisualStudio.TextManager.Interop.INITVIEW[])" /> method to force a given setting. Use the widget margin setting from the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.VIEWPREFERENCES" /> structure.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_SET_SELECTION_MARGIN">
-      <summary>Use the selection margin setting from the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.VIEWPREFERENCES" /> structure.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_SET_VIRTUAL_SPACE">
-      <summary>Use the virtual space setting from the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.VIEWPREFERENCES" /> structure.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_SET_INDENT_MODE">
-      <summary>Use the auto-indent suppression setting from the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.VIEWPREFERENCES" /> structure.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_SET_STREAM_SEL_MODE">
-      <summary>Obsolete.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_SET_VISIBLE_WHITESPACE">
-      <summary>Use visible white space setting.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_SET_OVERTYPE">
-      <summary>Use overtype mode setting.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_SET_DRAGDROPMOVE">
       <summary>Use drag and drop move setting</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_SET_HOTURLS">
       <summary>Use the Hot URLs setting</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_SET_INDENT_MODE">
+      <summary>Use the auto-indent suppression setting from the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.VIEWPREFERENCES" /> structure.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_SET_OVERTYPE">
+      <summary>Use overtype mode setting.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_SET_SELECTION_MARGIN">
+      <summary>Use the selection margin setting from the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.VIEWPREFERENCES" /> structure.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_SET_STREAM_SEL_MODE">
+      <summary>Obsolete.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_SET_VIRTUAL_SPACE">
+      <summary>Use the virtual space setting from the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.VIEWPREFERENCES" /> structure.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_SET_VISIBLE_WHITESPACE">
+      <summary>Use visible white space setting.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_SET_WIDGET_MARGIN">
+      <summary>If you wish to force a certain setting upon a view, regardless of the user's editor preference settings, use these flags along with a <see cref="T:Microsoft.VisualStudio.TextManager.Interop.VIEWPREFERENCES" /> pointer into <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.Initialize(Microsoft.VisualStudio.TextManager.Interop.IVsTextLines,System.IntPtr,System.UInt32,Microsoft.VisualStudio.TextManager.Interop.INITVIEW[])" /> method to force a given setting. Use the widget margin setting from the <see cref="T:Microsoft.VisualStudio.TextManager.Interop.VIEWPREFERENCES" /> structure.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_UPDATE_STATUS_BAR">
+      <summary>Tells the view to update the status bar.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TextViewInitFlags.VIF_VSCROLL">
+      <summary>Indicates that the view should have a vertical scrollbar. This value is equivalent to WS_VSCROLL from the Platform SDK.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.TipPosPreference">
       <summary>Determines where the tip window is placed relative to the context stream.</summary>
@@ -6856,14 +6856,14 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TipPosPreference.TPP_BELOW">
       <summary>Tip window is positioned below the context stream.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TipPosPreference.TPP_DOCKED">
+      <summary>Not implemented. This value defaults to TPP_ABOVE.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TipPosPreference.TPP_LEFT">
       <summary>Tip window is positioned to the left of the context stream.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TipPosPreference.TPP_RIGHT">
       <summary>Tip window is positioned to the right of the context stream.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TipPosPreference.TPP_DOCKED">
-      <summary>Not implemented. This value defaults to TPP_ABOVE.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.TIPSIZEDATA">
       <summary>Sets the size and position of a tip window.</summary>
@@ -6883,11 +6883,11 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.TipWindowFlags">
       <summary>Specifies tip window options.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TipWindowFlags.UTW_CONTEXTCHANGED">
-      <summary>Context stream is different.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TipWindowFlags.UTW_CONTENTCHANGED">
       <summary>Data displayed in window has changed (size will be re-queried).</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.TipWindowFlags.UTW_CONTEXTCHANGED">
+      <summary>Context stream is different.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.TipWindowFlags.UTW_DISMISS">
       <summary>Tip window should be dismissed.</summary>
@@ -6901,23 +6901,11 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags">
       <summary>Specifies completion set flags.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags.UCS_NAMESCHANGED">
-      <summary>Names or name count has changed.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags.UCS_EXTENTCHANGED">
-      <summary>Extent changed.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags.UCS_FLAGSCHANGED">
-      <summary>Flags have changed.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags.UCS_COMPLETEWORD">
-      <summary>Attempt word completion.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags.CSF_CUSTOMCOMMIT">
+      <summary>Indicates that the language service handles how an item selected from the completion box is entered into the text editor. Use <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet.OnCommit(System.String,System.Int32,System.Int32,System.UInt16,System.String@)" /> to commit completions.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags.CSF_CUSTOMMATCHING">
       <summary>Indicates that the language service handles custom completion matching of text typed by the user. Use IVsCompletionSet::<see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet.GetBestMatch(System.String,System.Int32,System.Int32@,System.UInt32@)" /> to manage selections. If you do not specify CSF_CUSTOMMATCHING, then the view handles matching text to the available options in the completion set.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags.CSF_CUSTOMCOMMIT">
-      <summary>Indicates that the language service handles how an item selected from the completion box is entered into the text editor. Use <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet.OnCommit(System.String,System.Int32,System.Int32,System.UInt16,System.String@)" /> to commit completions.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags.CSF_HAVEDESCRIPTIONS">
       <summary>Provides a tip for items in the completion box. Use <see cref="M:Microsoft.VisualStudio.TextManager.Interop.IVsCompletionSet.GetDescriptionText(System.Int32,System.String@)" /> to provide text for at least some of the entries.</summary>
@@ -6936,6 +6924,18 @@
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags.GBM_UNIQUE">
       <summary>The returned index is the only appropriate match.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags.UCS_COMPLETEWORD">
+      <summary>Attempt word completion.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags.UCS_EXTENTCHANGED">
+      <summary>Extent changed.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags.UCS_FLAGSCHANGED">
+      <summary>Flags have changed.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.UpdateCompletionFlags.UCS_NAMESCHANGED">
+      <summary>Names or name count has changed.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.VIEWPREFERENCES">
       <summary>Supplies settings for all text views.</summary>
@@ -7099,20 +7099,35 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID">
       <summary>Sets options for text editor property containers.</summary>
     </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_FIRST">
+      <summary>First VSEDITPROPID_ value.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_FrameOpt_SuppressResizeWidget">
+      <summary>BOOLEAN. Specifies whether frame has a resize widget in the bottom right corner of the window.</summary>
+    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_LAST">
       <summary>Last VSEDITPROPID_ value.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ProgLang_DebuggerLanguages">
+      <summary>UNK. Query IUnknown for <see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsEnumGUID" /> for the associated debugger languages.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ProgLang_SupportCF_HTML">
+      <summary>BOOLEAN. Specifies whether the language service supports the <see cref="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ProgLang_SupportCF_HTML" /> clipboard format.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ProgLang_SuppressMultipleCodeWindows">
+      <summary>BOOLAN. Specifies whether the Window/NewWindow command is disabled.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ViewComposite_AllCodeWindowDefaults">
       <summary>BOOLEAN. Must be TRUE. Initial settings to code window defaults.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ViewGeneral_FontCategory">
-      <summary>BSTR. Category from which to load font info.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ViewGeneral_ColorCategory">
       <summary>BSTR. Category from which to load color info.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ViewGlobalOpt_VisibleWhitespace">
-      <summary>BOOLEAN. Show spaces, tabs, and so on.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ViewGeneral_FontCategory">
+      <summary>BSTR. Category from which to load font info.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ViewGlobalOpt_AutoScrollCaretOnTextEntry">
+      <summary>BOOLEAN. Determines whether the caret scrolls based on the last line of the buffer.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ViewGlobalOpt_Overtype">
       <summary>BOOLEAN. Overtype or insert. NOT persisted.</summary>
@@ -7120,32 +7135,17 @@
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ViewGlobalOpt_SelectionMargin">
       <summary>BOOLEAN. Display selection margin. The selection margin is located between the widget margin and text.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ViewGlobalOpt_AutoScrollCaretOnTextEntry">
-      <summary>BOOLEAN. Determines whether the caret scrolls based on the last line of the buffer.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ViewLangOpt_WordWrap">
-      <summary>BOOLEAN. Specifies whether word wrap is on.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ViewLangOpt_VirtualSpace">
-      <summary>BOOLEAN. Specifies whether virtual space navigation or selection is active.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ViewGlobalOpt_VisibleWhitespace">
+      <summary>BOOLEAN. Show spaces, tabs, and so on.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ViewLangOpt_RawTextDisplay">
       <summary>BOOLEAN. Text is displayed in raw mode. No bi-directional layout, shaping, or combining.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_FrameOpt_SuppressResizeWidget">
-      <summary>BOOLEAN. Specifies whether frame has a resize widget in the bottom right corner of the window.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ViewLangOpt_VirtualSpace">
+      <summary>BOOLEAN. Specifies whether virtual space navigation or selection is active.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ProgLang_DebuggerLanguages">
-      <summary>UNK. Query IUnknown for <see cref="T:Microsoft.VisualStudio.TextManager.Interop.IVsEnumGUID" /> for the associated debugger languages.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ProgLang_SuppressMultipleCodeWindows">
-      <summary>BOOLAN. Specifies whether the Window/NewWindow command is disabled.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ProgLang_SupportCF_HTML">
-      <summary>BOOLEAN. Specifies whether the language service supports the <see cref="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ProgLang_SupportCF_HTML" /> clipboard format.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_FIRST">
-      <summary>First VSEDITPROPID_ value.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.VSEDITPROPID.VSEDITPROPID_ViewLangOpt_WordWrap">
+      <summary>BOOLEAN. Specifies whether word wrap is on.</summary>
     </member>
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.VsFinder">
       <summary>Finds a text image.</summary>
@@ -7249,11 +7249,11 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.vsIndentStyle">
       <summary>Defines indent styles.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.vsIndentStyle.vsIndentStyleNone">
-      <summary>No indent.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.vsIndentStyle.vsIndentStyleDefault">
       <summary>Default indent.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.vsIndentStyle.vsIndentStyleNone">
+      <summary>No indent.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.vsIndentStyle.vsIndentStyleSmart">
       <summary>Smart indent.</summary>
@@ -8873,29 +8873,29 @@
     <member name="T:Microsoft.VisualStudio.TextManager.Interop.WORDEXTFLAGS">
       <summary>Specifies options for determining the extent of a word.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.WORDEXTFLAGS.WORDEXT_MOVETYPE_MASK">
-      <summary>Flag to mask WORDEXT_PREVIOUS and WORDEXT_NEXT.</summary>
-    </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.WORDEXTFLAGS.WORDEXT_CURRENT">
       <summary>Finds a word or token containing a specified position, if any such word or token exists.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.WORDEXTFLAGS.WORDEXT_PREVIOUS">
-      <summary>Finds the nearest word or token whose last character is less than a specified position.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.WORDEXTFLAGS.WORDEXT_NEXT">
-      <summary>Finds the nearest word or token whose first character is greater than a specified position.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.WORDEXTFLAGS.WORDEXT_NEAREST">
-      <summary>Finds the word or token nearest to a specified position.</summary>
-    </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.WORDEXTFLAGS.WORDEXT_FINDWORD">
-      <summary>Finds words only. See Remarks.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.WORDEXTFLAGS.WORDEXT_FINDEXPRESSION">
+      <summary>Find simple expressions, like *pFoo.</summary>
     </member>
     <member name="F:Microsoft.VisualStudio.TextManager.Interop.WORDEXTFLAGS.WORDEXT_FINDTOKEN">
       <summary>Finds words and tokens. See Remarks.</summary>
     </member>
-    <member name="F:Microsoft.VisualStudio.TextManager.Interop.WORDEXTFLAGS.WORDEXT_FINDEXPRESSION">
-      <summary>Find simple expressions, like *pFoo.</summary>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.WORDEXTFLAGS.WORDEXT_FINDWORD">
+      <summary>Finds words only. See Remarks.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.WORDEXTFLAGS.WORDEXT_MOVETYPE_MASK">
+      <summary>Flag to mask WORDEXT_PREVIOUS and WORDEXT_NEXT.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.WORDEXTFLAGS.WORDEXT_NEAREST">
+      <summary>Finds the word or token nearest to a specified position.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.WORDEXTFLAGS.WORDEXT_NEXT">
+      <summary>Finds the nearest word or token whose first character is greater than a specified position.</summary>
+    </member>
+    <member name="F:Microsoft.VisualStudio.TextManager.Interop.WORDEXTFLAGS.WORDEXT_PREVIOUS">
+      <summary>Finds the nearest word or token whose last character is less than a specified position.</summary>
     </member>
   </members>
 </doc>
