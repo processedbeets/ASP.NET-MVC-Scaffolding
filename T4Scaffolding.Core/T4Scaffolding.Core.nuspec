@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>T4Scaffolding.Core.VS2015</id>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <authors>David Fowler, Scott Hanselman, Steve Sanderson, David Anderson</authors>
     <title>T4Scaffolding.Core (Fix VS2015)</title>
     <description>A fast and customizable way to build parts of your .NET application via templates</description>

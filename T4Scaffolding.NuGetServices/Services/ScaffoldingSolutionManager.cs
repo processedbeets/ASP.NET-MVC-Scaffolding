@@ -22,58 +22,49 @@ namespace T4Scaffolding.NuGetServices.Services
 
             try
             {
-                _dte = (DTE)Package.GetGlobalService(typeof(DTE)) ?? (DTE)Marshal.GetActiveObject("visualstudio.dte"); // VS 2015
+                _dte = (DTE)Package.GetGlobalService(typeof(DTE)) ?? (DTE)Marshal.GetActiveObject("visualstudio.dte");
             }
             catch (COMException exception)
             {
-                if (exception.ErrorCode == -2147221005) // Invalid Class String
+                if (exception.ErrorCode == -2147221005)
                 {
-                    _dte = (DTE)Marshal.GetActiveObject("visualstudio.dte.12.0"); // VS2013                    
+                    _dte= (DTE)Marshal.GetActiveObject("visualstudio.dte.12.0");
                 }
                 else
                 {
                     throw;
                 }
             }
-
-
+            
             if (_dte == null) throw new InvalidOperationException("Cannot get an instance of EnvDTE.DTE");
         }
 
         public Project GetProject(string projectName)
         {
-            if (IsSolutionOpen)
-            {
+            if (IsSolutionOpen) {
                 EnsureProjectCache();
                 Project project;
                 _projectCache.TryGetValue(projectName, out project);
                 return project;
-            }
-            else
-            {
+            } else {
                 return null;
             }
         }
 
         public IEnumerable<Project> GetProjects()
         {
-            if (IsSolutionOpen)
-            {
+            if (IsSolutionOpen) {
                 EnsureProjectCache();
                 return _projectCache.Values;
-            }
-            else
-            {
+            } else {
                 return Enumerable.Empty<Project>();
             }
         }
 
         public string SolutionDirectory
         {
-            get
-            {
-                if (!IsSolutionOpen || String.IsNullOrEmpty(_dte.Solution.FullName))
-                {
+            get {
+                if (!IsSolutionOpen || String.IsNullOrEmpty(_dte.Solution.FullName)) {
                     return null;
                 }
 
@@ -88,10 +79,8 @@ namespace T4Scaffolding.NuGetServices.Services
 
         public Project DefaultProject
         {
-            get
-            {
-                if (String.IsNullOrEmpty(DefaultProjectName))
-                {
+            get {
+                if (String.IsNullOrEmpty(DefaultProjectName)) {
                     return null;
                 }
                 Project project = GetProject(DefaultProjectName);
@@ -107,8 +96,7 @@ namespace T4Scaffolding.NuGetServices.Services
 
         private void EnsureProjectCache()
         {
-            if (IsSolutionOpen && _projectCache == null)
-            {
+            if (IsSolutionOpen && _projectCache == null) {
                 // Initialize the cache
                 var allProjects = _dte.Solution.GetAllProjects();
                 _projectCache = allProjects.ToDictionary(project => project.Name, StringComparer.OrdinalIgnoreCase);
