@@ -8,7 +8,7 @@
     <description>A fast and customizable way to add controllers, views, and other items to your ASP.NET MVC application</description>
     <summary>A fast and customizable way to add controllers, views, and other items to your ASP.NET MVC application</summary>
     <dependencies>
-      <dependency id="T4Scaffolding.VS2017" version="1.0.10" />
+      <dependency id="T4Scaffolding.VS2017" version="1.0.0" />
     </dependencies>
   </metadata>
   <files>
