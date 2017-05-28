@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <package>
   <metadata>
-    <id>MvcScaffolding.VS2015</id>
-    <version>1.0.12</version>
-    <authors>Scott Hanselman, Steve Sanderson, David Anderson</authors>
-    <title>MvcScaffolding (Fix VS2015)</title>
+    <id>MvcScaffolding.VS2017</id>
+    <version>1.0.0</version>
+    <authors>Scott Hanselman, Steve Sanderson, David Anderson, Cigano Morrison Mendez</authors>
+    <title>MvcScaffolding (Fix VS2017)</title>
     <description>A fast and customizable way to add controllers, views, and other items to your ASP.NET MVC application</description>
     <summary>A fast and customizable way to add controllers, views, and other items to your ASP.NET MVC application</summary>
     <dependencies>
-      <dependency id="T4Scaffolding.VS2015" version="[1.0.10]" />
+      <dependency id="T4Scaffolding.VS2017" version="1.0.10" />
     </dependencies>
   </metadata>
   <files>
