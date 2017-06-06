@@ -1,4 +1,0 @@
-<#@ Template Language="C#" HostSpecific="True" Inherits="DynamicTransform" #>
-public Table<<#= ((EnvDTE.CodeType)Model.EntityType).FullName #>> <#= Model.EntityTypeNamePluralized #> {
-	get { return dataContext.GetTable<<#= ((EnvDTE.CodeType)Model.EntityType).FullName #>>(); }
-}

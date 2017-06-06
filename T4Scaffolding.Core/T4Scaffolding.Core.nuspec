@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <package>
   <metadata>
-    <id>T4Scaffolding.Core.VS2015</id>
-    <version>1.0.3</version>
-    <authors>David Fowler, Scott Hanselman, Steve Sanderson, David Anderson</authors>
-    <title>T4Scaffolding.Core (Fix VS2015)</title>
+    <id>T4Scaffolding.Core.VS2017</id>
+    <version>1.0.0</version>
+    <authors>David Fowler, Scott Hanselman, Steve Sanderson, David Anderson, Cigano Morrison Mendez</authors>
+    <title>T4Scaffolding.Core (Fix VS2017)</title>
     <description>A fast and customizable way to build parts of your .NET application via templates</description>
     <summary>A fast and customizable way to build parts of your .NET application via templates</summary>
   </metadata>
