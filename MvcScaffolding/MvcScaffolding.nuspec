@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>MvcScaffolding.VS2017</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Scott Hanselman, Steve Sanderson, David Anderson, Cigano Morrison Mendez</authors>
     <title>MvcScaffolding (Fix VS2017)</title>
     <description>A fast and customizable way to add controllers, views, and other items to your ASP.NET MVC application</description>

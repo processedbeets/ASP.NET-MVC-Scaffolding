@@ -1,0 +1,9 @@
+*.nupkg
+obj
+bin
+packages
+*.suo
+/.vs/slnx.sqlite
+*.suo
+.vs
+*.vssscc
