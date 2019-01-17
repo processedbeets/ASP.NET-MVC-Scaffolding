@@ -8,7 +8,7 @@
     <description>A fast and customizable way to build parts of your .NET application via templates</description>
     <summary>A fast and customizable way to build parts of your .NET application via templates</summary>
     <dependencies>
-      <dependency id="T4Scaffolding.Core.VS2017" version="1.0.0" />
+      <dependency id="T4Scaffolding.Core.VS2017" version="1.0.1" />
       <dependency id="EntityFramework" version="4.1.10311.0" />
     </dependencies>
   </metadata>
