@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>T4Scaffolding.Core.VS2017</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>David Fowler, Scott Hanselman, Steve Sanderson, David Anderson, Cigano Morrison Mendez</authors>
     <title>T4Scaffolding.Core (Fix VS2017)</title>
     <description>A fast and customizable way to build parts of your .NET application via templates</description>
@@ -11,8 +11,8 @@
   <files>
     <file src="Scaffolders\**\*.t4" target="tools" />
     <file src="Scaffolders\**\*.ps1" target="tools" />
-    <file src="T4Scaffolding.dll" target="tools" />
-    <file src="T4Scaffolding.NuGetServices.dll" target="tools" />
+    <file src="bin\Release\T4Scaffolding.dll" target="tools" />
+    <file src="bin\Release\T4Scaffolding.NuGetServices.dll" target="tools" />
     <file src="*.ps1*" target="tools" />
     <file src="scaffoldingTabExpansion.psm1" target="tools" />
     <file src="InstallationDummyFile.txt" target="content" />

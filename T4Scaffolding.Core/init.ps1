@@ -1,11 +1,5 @@
 ﻿param($rootPath, $toolsPath, $package, $project)
 
-# Don't support old NuGet versions as it's impractical to handle all their different sets of sematics
-if ([NuGet.PackageManager].Assembly.GetName().Version -lt 1.4) 
-{
-	throw "T4Scaffolding requires NuGet (Package Manager Console) 1.4 or later"
-} 
-
 function GetLoadedT4ScaffoldingAssemblyVersion() {
 	try {
 		return [T4Scaffolding.ScaffolderAttribute].Assembly.GetName().Version
