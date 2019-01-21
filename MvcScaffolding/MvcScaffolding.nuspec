@@ -2,13 +2,13 @@
 <package>
   <metadata>
     <id>MvcScaffolding.VS2017</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <authors>Scott Hanselman, Steve Sanderson, David Anderson, Cigano Morrison Mendez</authors>
     <title>MvcScaffolding (Fix VS2017)</title>
     <description>A fast and customizable way to add controllers, views, and other items to your ASP.NET MVC application</description>
     <summary>A fast and customizable way to add controllers, views, and other items to your ASP.NET MVC application</summary>
     <dependencies>
-      <dependency id="T4Scaffolding.VS2017" version="1.0.0" />
+      <dependency id="T4Scaffolding.VS2017" version="1.0.1" />
     </dependencies>
   </metadata>
   <files>

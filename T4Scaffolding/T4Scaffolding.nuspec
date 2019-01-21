@@ -2,7 +2,7 @@
 <package>
   <metadata>
     <id>T4Scaffolding.VS2017</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>David Fowler, Scott Hanselman, Steve Sanderson, David Anderson, Cigano Morrison Mendez</authors>
     <title>T4Scaffolding (Fix VS2017)</title>
     <description>A fast and customizable way to build parts of your .NET application via templates</description>

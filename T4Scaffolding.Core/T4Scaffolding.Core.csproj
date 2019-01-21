@@ -117,7 +117,6 @@
     <Compile Include="ViewScaffolderAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="init.ps1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -173,7 +172,7 @@
   </Target>
   -->
   <Target Name="AfterBuild">
-    <Exec Command="$(MSBuildProjectDirectory)\..\Tools\NuPack.exe pack" WorkingDirectory="$(OutputPath)" />
+    <Exec Command="$(MSBuildProjectDirectory)\..\Tools\NuPack.exe pack" WorkingDirectory="$(OutputPath)\..\..\" />
     <CreateItem Include=".\**\*.nupkg">
       <Output TaskParameter="Include" ItemName="BuiltPackages" />
     </CreateItem>
