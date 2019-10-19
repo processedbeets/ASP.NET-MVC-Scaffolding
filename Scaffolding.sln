@@ -19,10 +19,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4Scaffolding.NuGetServices
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4Scaffolding.Core", "T4Scaffolding.Core\T4Scaffolding.Core.csproj", "{58D14702-323C-4461-AB37-95061EC758ED}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{B252132C-6F1D-49FB-B9FA-36AA8CE0456F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleMVC", "ExampleMVC\ExampleMVC.csproj", "{54E81224-2A70-47CE-8E19-2994845B214B}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,10 +49,6 @@ Global
 		{58D14702-323C-4461-AB37-95061EC758ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58D14702-323C-4461-AB37-95061EC758ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58D14702-323C-4461-AB37-95061EC758ED}.Release|Any CPU.Build.0 = Release|Any CPU
-		{54E81224-2A70-47CE-8E19-2994845B214B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{54E81224-2A70-47CE-8E19-2994845B214B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{54E81224-2A70-47CE-8E19-2994845B214B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{54E81224-2A70-47CE-8E19-2994845B214B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,7 +59,6 @@ Global
 		{B63A5F25-C2D7-451D-8208-F812416B68D9} = {94CF1A10-67CE-4945-8F81-B4A13D1F3FA3}
 		{412A692C-C66A-4272-9FCD-C78DDE98712A} = {2E67D06D-78A8-43B3-8CE1-202AD0B8325F}
 		{58D14702-323C-4461-AB37-95061EC758ED} = {2E67D06D-78A8-43B3-8CE1-202AD0B8325F}
-		{54E81224-2A70-47CE-8E19-2994845B214B} = {B252132C-6F1D-49FB-B9FA-36AA8CE0456F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {86A04F0F-07DF-4B5A-A715-C576BDEE65E3}
