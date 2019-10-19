@@ -81,7 +81,7 @@ namespace T4Scaffolding.Core.Configuration
         private void SaveConfigToFile(string filename, XmlScaffoldingConfig config)
         {
             _solutionManager.EnsureCheckedOutIfExists(filename);
-            using (var writer = new XmlTextWriter(filename, Encoding.UTF8) { Formatting = Formatting.Indented }) {
+            using (var writer = new XmlTextWriter(filename, new UTF8Encoding(true)) { Formatting = Formatting.Indented }) {
                 var serializer = new XmlSerializer(typeof(XmlScaffoldingConfig));
                 serializer.Serialize(writer, config);
             }

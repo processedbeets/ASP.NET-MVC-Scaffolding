@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>T4Scaffolding</RootNamespace>
     <AssemblyName>T4Scaffolding</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -117,6 +117,7 @@
     <Compile Include="ViewScaffolderAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="init.ps1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -172,7 +173,7 @@
   </Target>
   -->
   <Target Name="AfterBuild">
-    <Exec Command="$(MSBuildProjectDirectory)\..\Tools\NuPack.exe pack" WorkingDirectory="$(OutputPath)\..\..\" />
+    <Exec Command="$(MSBuildProjectDirectory)\..\Tools\nuget.exe pack"  WorkingDirectory="$(OutputPath)\..\..\" />
     <CreateItem Include=".\**\*.nupkg">
       <Output TaskParameter="Include" ItemName="BuiltPackages" />
     </CreateItem>

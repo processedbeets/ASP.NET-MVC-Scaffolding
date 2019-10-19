@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Text;
 
 namespace T4Scaffolding.Core.FileSystem
 {
@@ -27,7 +28,7 @@ namespace T4Scaffolding.Core.FileSystem
 
         public void WriteAllText(string path, string textContents)
         {
-            File.WriteAllText(path, textContents);
+            File.WriteAllText(path, textContents, new UTF8Encoding(true));
         }
 
         public IEnumerable<string> FindFiles(string path, string pattern, bool includeSubdirectories)

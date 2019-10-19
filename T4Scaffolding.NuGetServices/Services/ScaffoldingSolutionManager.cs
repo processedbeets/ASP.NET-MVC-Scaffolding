@@ -28,7 +28,7 @@ namespace T4Scaffolding.NuGetServices.Services
             {
                 if (exception.ErrorCode == -2147221005)
                 {
-                    _dte= (DTE)Marshal.GetActiveObject("visualstudio.dte.14.0");
+                    _dte= (DTE)Marshal.GetActiveObject("visualstudio.dte.15.0");
                 }
                 else
                 {

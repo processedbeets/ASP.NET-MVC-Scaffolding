@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MvcScaffolding</RootNamespace>
     <AssemblyName>MvcScaffolding</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>SAK</SccProjectName>
     <SccLocalPath>SAK</SccLocalPath>
@@ -241,7 +241,7 @@
     <!-- First append the standard code blocks to each of the view templates that need them -->
     <Exec Command="$(MSBuildProjectDirectory)\AppendStandardCodeToViews.bat $(OutputPath)" />
     <!-- Next invoke NuGet to create a .nupkg and copy it to BuiltPackages -->
-    <Exec Command="$(MSBuildProjectDirectory)\..\Tools\NuPack.exe pack" WorkingDirectory="$(OutputPath)" />
+    <Exec Command="$(MSBuildProjectDirectory)\..\Tools\nuget.exe pack" WorkingDirectory="$(OutputPath)" />
     <CreateItem Include=".\**\*.nupkg">
       <Output TaskParameter="Include" ItemName="BuiltPackages" />
     </CreateItem>
