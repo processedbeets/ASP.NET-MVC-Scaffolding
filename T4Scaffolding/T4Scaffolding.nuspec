@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <package>
   <metadata>
-    <id>T4Scaffolding.VS2017</id>
-    <version>1.0.1</version>
-    <authors>David Fowler, Scott Hanselman, Steve Sanderson, David Anderson, Cigano Morrison Mendez</authors>
-    <title>T4Scaffolding (Fix VS2017)</title>
+    <id>T4Scaffolding.VS2019</id>
+    <version>1.0.2</version>
+    <authors>David Fowler, Scott Hanselman, Steve Sanderson, David Anderson, Cigano Morrison Mendez, Pablo Tôndolo de Vargas</authors>
+    <title>T4Scaffolding (Fix VS2019)</title>
     <description>A fast and customizable way to build parts of your .NET application via templates</description>
     <summary>A fast and customizable way to build parts of your .NET application via templates</summary>
     <dependencies>
-      <dependency id="T4Scaffolding.Core.VS2017" version="1.0.1" />
+      <dependency id="T4Scaffolding.Core.VS2019" version="1.0.1" />
       <dependency id="EntityFramework" version="4.1.10311.0" />
     </dependencies>
   </metadata>
