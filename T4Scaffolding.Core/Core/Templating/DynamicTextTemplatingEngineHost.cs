@@ -30,7 +30,7 @@ namespace T4Scaffolding.Core.Templating {
         private AppDomain _templateAppDomain;
 
         public DynamicTextTemplatingEngineHost() {
-            FileEncoding = Encoding.UTF8;
+            FileEncoding = new UTF8Encoding(true);
             FileExtension = String.Empty;            
         }
 

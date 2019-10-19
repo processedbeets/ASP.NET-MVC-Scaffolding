@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29411.108
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "T4Scaffolding", "T4Scaffolding", "{2E67D06D-78A8-43B3-8CE1-202AD0B8325F}"
 EndProject
@@ -18,6 +18,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4Scaffolding.NuGetServices", "T4Scaffolding.NuGetServices\T4Scaffolding.NuGetServices.csproj", "{412A692C-C66A-4272-9FCD-C78DDE98712A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "T4Scaffolding.Core", "T4Scaffolding.Core\T4Scaffolding.Core.csproj", "{58D14702-323C-4461-AB37-95061EC758ED}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{B252132C-6F1D-49FB-B9FA-36AA8CE0456F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleMVC", "ExampleMVC\ExampleMVC.csproj", "{54E81224-2A70-47CE-8E19-2994845B214B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,10 @@ Global
 		{58D14702-323C-4461-AB37-95061EC758ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58D14702-323C-4461-AB37-95061EC758ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58D14702-323C-4461-AB37-95061EC758ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54E81224-2A70-47CE-8E19-2994845B214B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54E81224-2A70-47CE-8E19-2994845B214B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54E81224-2A70-47CE-8E19-2994845B214B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54E81224-2A70-47CE-8E19-2994845B214B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,34 +67,9 @@ Global
 		{B63A5F25-C2D7-451D-8208-F812416B68D9} = {94CF1A10-67CE-4945-8F81-B4A13D1F3FA3}
 		{412A692C-C66A-4272-9FCD-C78DDE98712A} = {2E67D06D-78A8-43B3-8CE1-202AD0B8325F}
 		{58D14702-323C-4461-AB37-95061EC758ED} = {2E67D06D-78A8-43B3-8CE1-202AD0B8325F}
+		{54E81224-2A70-47CE-8E19-2994845B214B} = {B252132C-6F1D-49FB-B9FA-36AA8CE0456F}
 	EndGlobalSection
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 7
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://vvmspds.gene.com:8080/tfs/se
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = T4Scaffolding\\T4Scaffolding.csproj
-		SccProjectTopLevelParentUniqueName1 = Scaffolding.sln
-		SccProjectName1 = T4Scaffolding
-		SccLocalPath1 = T4Scaffolding
-		SccProjectUniqueName2 = T4Scaffolding.Test\\T4Scaffolding.Test.csproj
-		SccProjectTopLevelParentUniqueName2 = Scaffolding.sln
-		SccProjectName2 = T4Scaffolding.Test
-		SccLocalPath2 = T4Scaffolding.Test
-		SccProjectUniqueName3 = MvcScaffolding\\MvcScaffolding.csproj
-		SccProjectName3 = MvcScaffolding
-		SccLocalPath3 = MvcScaffolding
-		SccProjectUniqueName4 = LinqToSqlScaffolding\\LinqToSqlScaffolding.csproj
-		SccProjectTopLevelParentUniqueName4 = Scaffolding.sln
-		SccProjectName4 = LinqToSqlScaffolding
-		SccLocalPath4 = LinqToSqlScaffolding
-		SccProjectUniqueName5 = T4Scaffolding.NuGetServices\\T4Scaffolding.NuGetServices.csproj
-		SccProjectTopLevelParentUniqueName5 = Scaffolding.sln
-		SccProjectName5 = T4Scaffolding.NuGetServices
-		SccLocalPath5 = T4Scaffolding.NuGetServices
-		SccProjectUniqueName6 = T4Scaffolding.Core\\T4Scaffolding.Core.csproj
-		SccProjectTopLevelParentUniqueName6 = Scaffolding.sln
-		SccProjectName6 = T4Scaffolding.Core
-		SccLocalPath6 = T4Scaffolding.Core
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {86A04F0F-07DF-4B5A-A715-C576BDEE65E3}
 	EndGlobalSection
 EndGlobal
